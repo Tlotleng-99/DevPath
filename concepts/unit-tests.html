@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tasting the Potjie · Mzansi Code</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="ticker">
+        <div class="ticker-track">
+            ★ ye!bo! Learn coding the Mzansi way ★ fatcakes &amp; algorithms ★ kwa taxi rank queues ★ spaza shop data structures ★ sharp sharp ★
+            ★ ye!bo! Learn coding the Mzansi way ★ fatcakes &amp; algorithms ★ kwa taxi rank queues ★ spaza shop data structures ★ sharp sharp ★
+        </div>
+    </div>
+
+    <nav class="topbar">
+        <a class="brand" href="../index.html"><span class="flagdot">🇿🇦</span> Mzansi&nbsp;Code</a>
+        <div class="links">
+            <a href="../index.html">Home</a>
+            
+            <a href="../foundations/index.html">Computers</a>
+            
+            <a href="../algorithms/index.html">Algorithms</a>
+            
+            <a href="index.html">Coding Concepts</a>
+            
+        </div>
+    </nav>
+
+    <div class="flagstrip">
+        <i class="r"></i><i class="y"></i><i class="g"></i><i class="b"></i><i class="k"></i><i class="w"></i>
+    </div>
+
+    <main>
+        
+    <header class="lesson-header">
+        <p class="crumb"><a href="index.html">← Coding Concepts</a></p>
+        <span class="hero-kicker">Check every part before you serve</span>
+        <h1 class="lesson-title"><span class="emoji-badge">🥘</span> Tasting the Potjie</h1>
+        <p class="lesson-tag">Before the guests arrive, taste the potjie piece by piece. Unit tests are little tasters that check your code automatically.</p>
+    </header>
+
+    <div class="lesson-body">
+        <div>
+            <div class="panel">
+                <h2>Try it yourself <span class="live">live</span></h2>
+                <p>The chef wrote tests for the soup. One batch has a bug — one test fails. Find it, fix it, and the whole test tray goes green.</p>
+                <div class="stage">
+                    
+        <div class="test-stage">
+            <div class="tests" id="test-list"></div>
+            <div class="controls">
+                <button class="red" id="test-run">🧪 Run the tests (buggy batch)</button>
+                <button class="green" id="test-fix">🔧 Fix the recipe</button>
+            </div>
+            <pre class="trace" id="test-trace"># remember: taste each part before serving</pre>
+        </div>
+        
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            
+        <h2>The proper cs name</h2>
+        <p>A <strong>unit test</strong> checks one small unit of code automatically. It calls a function with known inputs and <em>asserts</em> the expected result.</p>
+        <ul>
+            <li><code>assert</code> — 'this MUST be true'.</li>
+            <li>One test = <em>given inputs → expected output</em>.</li>
+            <li>Run them all in one command. Every time.</li>
+        </ul>
+        <pre class="code-note">def test_salt_is_right():
+    soup = cook_soup()
+    assert soup.salt == "just enough", "too salty lag!"
+
+def test_gravy_is_thick():
+    soup = cook_soup()
+    assert soup.gravy_before_easter &gt; 3     # 3 spoons minimum</pre>
+        <p><strong>Where they live:</strong> every serious project ships tests. They run in CI on every commit. If a change breaks something — the tests know before you do.</p>
+        
+        </div>
+    </div>
+
+    <h2 class="section-title">The story, slowly 🧠</h2>
+    <div class="explain-list" style="--acc: #059669">
+        
+        <div class="explain-item"><span class="n">1</span><div><h3>Taste before serving</h3><p>You wouldn&#39;t serve an untested potjie to 20 hungry guests. Unit tests taste-test each small part before strangers meet your code.</p></div></div>
+        
+        <div class="explain-item"><span class="n">2</span><div><h3>Assert the truth</h3><p>&#39;assert soup.salt == just enough.&#39; A test is a promise the program must prove. If the promise breaks, the test goes red and screams.</p></div></div>
+        
+        <div class="explain-item"><span class="n">3</span><div><h3>Catch bugs early</h3><p>A bug found by a test at 9am costs a coffee. The same bug found in production costs the weekend. Tests move bugs to where they&#39;re cheap.</p></div></div>
+        
+        <div class="explain-item"><span class="n">4</span><div><h3>Green is peace of mind</h3><p>When all tests pass, you can sleep. When you change code later, you rerun the tray — and it tells you if you broke something.</p></div></div>
+        
+    </div>
+
+    <div class="nav-other">
+        <p class="crumb">Next lesson →</p>
+        <div class="grid mini">
+            
+            
+            <a class="card mini" href="functions.html" style="--acc: #e11d48"><span class="card-stripe"></span><div class="card-emoji">🍲</div><h3>The Pap Recipe</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="variables.html" style="--acc: #f97316"><span class="card-stripe"></span><div class="card-emoji">🏪</div><h3>The Spaza Stash</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="conditionals.html" style="--acc: #65a30d"><span class="card-stripe"></span><div class="card-emoji">🧍</div><h3>Taxi or Walk?</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="loops.html" style="--acc: #0d9488"><span class="card-stripe"></span><div class="card-emoji">🍳</div><h3>Fry Until the Pot is Empty</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="exceptions.html" style="--acc: #dc2626"><span class="card-stripe"></span><div class="card-emoji">🔌</div><h3>Load Shedding Survival</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="libraries.html" style="--acc: #7c3aed"><span class="card-stripe"></span><div class="card-emoji">🌶️</div><h3>Don&#39;t Grind It, Import It</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            
+            
+            <a class="card mini" href="file-io.html" style="--acc: #92400e"><span class="card-stripe"></span><div class="card-emoji">📒</div><h3>The Spaza Notebook</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="regex.html" style="--acc: #4f46e5"><span class="card-stripe"></span><div class="card-emoji">🔍</div><h3>CV Skena (Regex)</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="oop.html" style="--acc: #1d4ed8"><span class="card-stripe"></span><div class="card-emoji">🚐</div><h3>The Kombi Blueprint</h3><span class="card-link">Open →</span></a>
+            
+            <a class="card mini" href="data-structures.html" style="--acc: #0f766e"><span class="card-stripe"></span><div class="card-emoji">🧱</div><h3>The Kasi Line-Up</h3><span class="card-link">Open →</span></a>
+            
+            
+        </div>
+    </div>
+
+    
+    <script>
+        
+        var listEl = document.getElementById('test-list');
+        var trace = document.getElementById('test-trace');
+        var buggy = true;
+        var TESTS = [
+            { name: 'test_salt_is_right', ok: false, note: 'assert soup.salt == "just enough"' },
+            { name: 'test_gravy_is_thick', ok: true, note: 'assert soup.gravy_before_easter > 3' },
+            { name: 'test_fire_medium', ok: true, note: 'assert fire.power == "medium"' }
+        ];
+        function renderTests(done) {
+            listEl.innerHTML = '';
+            TESTS.forEach(function (t) {
+                var el = document.createElement('div');
+                el.className = 'test-row ' + (done === null ? 'wait' : (t.ok && !buggy ? 'pass' : 'fail'));
+                el.innerHTML = '<span class="test-dot"></span><code>' + t.name + '()</code>' +
+                               '<span class="test-state">' +
+                               (done === null ? '⏳' : ((t.ok && !buggy) ? 'PASS ✅' : 'FAIL ❌')) +
+                               '</span>';
+                listEl.appendChild(el);
+            });
+        }
+        document.getElementById('test-run').addEventListener('click', function () {
+            if (buggy) {
+                renderTests(null);
+                setTimeout(function () {
+                    renderTests(true);
+                    trace.textContent = '1 of 3 tests FAILED → test_salt_is_right. Recipe is buggy 🥴 Fix it!';
+                }, 700);
+            } else {
+                renderTests(null);
+                setTimeout(function () {
+                    renderTests(true);
+                    trace.textContent = '3 of 3 tests passed — potjie is ready to serve 🎉';
+                }, 700);
+            }
+        });
+        document.getElementById('test-fix').addEventListener('click', function () {
+            buggy = false;
+            renderTests(null);
+            trace.textContent = '🔧 fixed the salt ratio! Now rerun the tests…';
+        });
+        renderTests(true);
+        
+    </script>
+    
+
+    </main>
+
+    <div class="flagstrip">
+        <i class="r"></i><i class="y"></i><i class="g"></i><i class="b"></i><i class="k"></i><i class="w"></i>
+    </div>
+
+    <footer class="footer">
+        <strong>Mzansi Code</strong> — built by a South African, for South African students.<br>
+        Every CS concept already lives in your everyday. We just gave it a fancy name. 💚💛
+    </footer>
+
+    
+    <script>
+        
+        var listEl = document.getElementById('test-list');
+        var trace = document.getElementById('test-trace');
+        var buggy = true;
+        var TESTS = [
+            { name: 'test_salt_is_right', ok: false, note: 'assert soup.salt == "just enough"' },
+            { name: 'test_gravy_is_thick', ok: true, note: 'assert soup.gravy_before_easter > 3' },
+            { name: 'test_fire_medium', ok: true, note: 'assert fire.power == "medium"' }
+        ];
+        function renderTests(done) {
+            listEl.innerHTML = '';
+            TESTS.forEach(function (t) {
+                var el = document.createElement('div');
+                el.className = 'test-row ' + (done === null ? 'wait' : (t.ok && !buggy ? 'pass' : 'fail'));
+                el.innerHTML = '<span class="test-dot"></span><code>' + t.name + '()</code>' +
+                               '<span class="test-state">' +
+                               (done === null ? '⏳' : ((t.ok && !buggy) ? 'PASS ✅' : 'FAIL ❌')) +
+                               '</span>';
+                listEl.appendChild(el);
+            });
+        }
+        document.getElementById('test-run').addEventListener('click', function () {
+            if (buggy) {
+                renderTests(null);
+                setTimeout(function () {
+                    renderTests(true);
+                    trace.textContent = '1 of 3 tests FAILED → test_salt_is_right. Recipe is buggy 🥴 Fix it!';
+                }, 700);
+            } else {
+                renderTests(null);
+                setTimeout(function () {
+                    renderTests(true);
+                    trace.textContent = '3 of 3 tests passed — potjie is ready to serve 🎉';
+                }, 700);
+            }
+        });
+        document.getElementById('test-fix').addEventListener('click', function () {
+            buggy = false;
+            renderTests(null);
+            trace.textContent = '🔧 fixed the salt ratio! Now rerun the tests…';
+        });
+        renderTests(true);
+        
+    </script>
+    
+    <script src="../static/legacy-copy.js"></script>
+    <script src="../static/language.js"></script>
+</body>
+</html>
