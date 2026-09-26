@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Kasi Line-Up · Mzansi Code</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="ticker">
+        <div class="ticker-track">
+            ★ ye!bo! Learn coding the Mzansi way ★ fatcakes &amp; algorithms ★ kwa taxi rank queues ★ spaza shop data structures ★ sharp sharp ★
+            ★ ye!bo! Learn coding the Mzansi way ★ fatcakes &amp; algorithms ★ kwa taxi rank queues ★ spaza shop data structures ★ sharp sharp ★
+        </div>
+    </div>
+
+    <nav class="topbar">
+        <a class="brand" href="../index.html"><span class="flagdot">🇿🇦</span> Mzansi&nbsp;Code</a>
+        <div class="links">
+            <a href="../index.html">Home</a>
+            <a href="../foundations/index.html">Computers</a>
+            <a href="../algorithms/index.html">Algorithms</a>
+            <a href="index.html">Coding Concepts</a>
+        </div>
+    </nav>
+
+    <div class="flagstrip">
+        <i class="r"></i><i class="y"></i><i class="g"></i><i class="b"></i><i class="k"></i><i class="w"></i>
+    </div>
+
+    <main>
+        <header class="lesson-header">
+            <p class="crumb"><a href="index.html">← Coding Concepts</a></p>
+            <span class="hero-kicker">Same items, different order</span>
+            <h1 class="lesson-title"><span class="emoji-badge">🧱</span> The Kasi Line-Up</h1>
+            <p class="lesson-tag">A <strong>stack</strong> gives you the newest item first. A <strong>queue</strong> gives you the oldest item first. Same data, two very different rules.</p>
+        </header>
+
+        <div class="lesson-body">
+            <div>
+                <div class="panel">
+                    <h2>Try it yourself <span class="live">live</span></h2>
+                    <p>Add and remove items in both structures. Watch the fatcake pile and the taxi rank reveal what <strong>LIFO</strong> and <strong>FIFO</strong> actually mean.</p>
+                    <div class="stage">
+                        <div class="ds-stage">
+                            <div class="ds-columns">
+                                <section class="ds-demo ds-stack-demo" aria-labelledby="ds-stack-heading">
+                                    <h3 id="ds-stack-heading">🧱 Fatcake stack <span class="ds-rule">LIFO</span></h3>
+                                    <p>New fatcakes land on top. Serve from the top — last in, first out.</p>
+                                    <div class="ds-stack-view" id="ds-stack-view" aria-live="polite"></div>
+                                    <div class="ds-order" id="ds-stack-order"></div>
+                                    <div class="controls">
+                                        <button class="green" id="ds-add-stack" type="button" data-mz="addStack">➕ Add fatcake</button>
+                                        <button class="red" id="ds-pop-stack" type="button" data-mz="popStack">🍽️ Serve top</button>
+                                    </div>
+                                </section>
+
+                                <section class="ds-demo ds-queue-demo" aria-labelledby="ds-queue-heading">
+                                    <h3 id="ds-queue-heading">🚕 Taxi queue <span class="ds-rule">FIFO</span></h3>
+                                    <p>New passengers join the back. Call from the front — first in, first out.</p>
+                                    <div class="ds-queue-view" id="ds-queue-view" aria-live="polite"></div>
+                                    <div class="ds-order" id="ds-queue-order"></div>
+                                    <div class="controls">
+                                        <button class="blue" id="ds-add-queue" type="button" data-mz="addQueue">➕ Join the queue</button>
+                                        <button class="yellow" id="ds-shift-queue" type="button" data-mz="shiftQueue">📣 Call next</button>
+                                    </div>
+                                </section>
+                            </div>
+                            <pre class="trace" id="ds-trace"># add or remove something, then compare the order</pre>
+                            <div class="controls ds-global-controls">
+                                <button class="yellow" id="ds-reset" type="button" data-mz="reset">↺ Reset the line-up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h2>The proper cs name</h2>
+                <p>A <strong>data structure</strong> is a way of organising data so the program can use it efficiently. A <strong>stack</strong> follows <strong>LIFO</strong> — Last In, First Out. A <strong>queue</strong> follows <strong>FIFO</strong> — First In, First Out.</p>
+                <ul>
+                    <li><code>push(item)</code> / <code>pop()</code> — add and remove at the stack's top.</li>
+                    <li><code>enqueue(item)</code> / <code>dequeue()</code> — add at the back and remove from the queue's front.</li>
+                    <li>Choose the structure based on the order your problem needs.</li>
+                </ul>
+                <pre class="code-note"># Stack — LIFO: newest first
+fatcake_stack = ["Chips", "Beef kota"]
+fatcake_stack.append("Vetkoek")
+fatcake_stack.pop()       # -&gt; "Vetkoek"
+
+# Queue — FIFO: oldest first
+taxi_queue = ["Thabo", "Zinhle"]
+taxi_queue.append("Pieter")
+taxi_queue.pop(0)         # -&gt; "Thabo"</pre>
+                <p><strong>Where they live:</strong> undo buttons, browser history, printer queues, support tickets, task scheduling, and the call stack inside your program.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">The story, slowly 🧠</h2>
+        <div class="explain-list" style="--acc: #0f766e">
+            <div class="explain-item"><span class="n">1</span><div><h3>One pile, one line</h3><p>The fatcakes and taxi passengers are just items. The <em>data structure</em> decides which item the program is allowed to reach next.</p></div></div>
+            <div class="explain-item"><span class="n">2</span><div><h3>Stack means newest first</h3><p>Put something on a stack and it becomes the top item. Remove from a stack and that newest item leaves first. That is <strong>LIFO</strong>.</p></div></div>
+            <div class="explain-item"><span class="n">3</span><div><h3>Queue means oldest first</h3><p>Join the back of a queue and wait your turn. Remove from the front and the person who arrived first gets served. That is <strong>FIFO</strong>.</p></div></div>
+            <div class="explain-item"><span class="n">4</span><div><h3>The rule follows the job</h3><p>Undo needs the latest action, so it uses a stack. A taxi rank must be fair, so it uses a queue. Choosing the right structure makes the code simpler.</p></div></div>
+        </div>
+
+        <div class="nav-other">
+            <p class="crumb">More lessons →</p>
+            <div class="grid mini">
+                <a class="card mini" href="functions.html" style="--acc: #e11d48"><span class="card-stripe"></span><div class="card-emoji">🍲</div><h3>The Pap Recipe</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="variables.html" style="--acc: #f97316"><span class="card-stripe"></span><div class="card-emoji">🏪</div><h3>The Spaza Stash</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="conditionals.html" style="--acc: #65a30d"><span class="card-stripe"></span><div class="card-emoji">🧍</div><h3>Taxi or Walk?</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="loops.html" style="--acc: #0d9488"><span class="card-stripe"></span><div class="card-emoji">🍳</div><h3>Fry Until the Pot is Empty</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="exceptions.html" style="--acc: #dc2626"><span class="card-stripe"></span><div class="card-emoji">🔌</div><h3>Load Shedding Survival</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="libraries.html" style="--acc: #7c3aed"><span class="card-stripe"></span><div class="card-emoji">🌶️</div><h3>Don&#39;t Grind It, Import It</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="unit-tests.html" style="--acc: #059669"><span class="card-stripe"></span><div class="card-emoji">🥘</div><h3>Tasting the Potjie</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="file-io.html" style="--acc: #92400e"><span class="card-stripe"></span><div class="card-emoji">📒</div><h3>The Spaza Notebook</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="regex.html" style="--acc: #4f46e5"><span class="card-stripe"></span><div class="card-emoji">🔍</div><h3>CV Skena (Regex)</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="oop.html" style="--acc: #1d4ed8"><span class="card-stripe"></span><div class="card-emoji">🚐</div><h3>The Kombi Blueprint</h3><span class="card-link">Open →</span></a>
+            </div>
+        </div>
+    </main>
+
+    <div class="flagstrip">
+        <i class="r"></i><i class="y"></i><i class="g"></i><i class="b"></i><i class="k"></i><i class="w"></i>
+    </div>
+
+    <footer class="footer">
+        <strong>Mzansi Code</strong> — built by a South African, for South African students.<br>
+        Every CS concept already lives in your everyday. We just gave it a fancy name. 💚💛
+    </footer>
+
+    <script>
+        var stack = ['Chips', 'Beef kota', 'Vetkoek'];
+        var queue = ['Thabo', 'Zinhle', 'Pieter'];
+        var newFood = ['Pap', 'Chakalaka', 'Boerewors', 'Russian'];
+        var newPeople = ['Naledi', 'Sipho', 'Aisha', 'Kabelo'];
+        var foodIndex = 0;
+        var peopleIndex = 0;
+        var stackView = document.getElementById('ds-stack-view');
+        var queueView = document.getElementById('ds-queue-view');
+        var stackOrder = document.getElementById('ds-stack-order');
+        var queueOrder = document.getElementById('ds-queue-order');
+        var trace = document.getElementById('ds-trace');
+
+        function renderStack() {
+            stackView.innerHTML = '';
+            if (stack.length === 0) {
+                var emptyStack = document.createElement('div');
+                emptyStack.className = 'ds-empty';
+                emptyStack.textContent = 'Empty stack — add a fatcake first.';
+                stackView.appendChild(emptyStack);
+            } else {
+                stack.slice().reverse().forEach(function (item, index) {
+                    var row = document.createElement('div');
+                    row.className = 'ds-item stack-item' + (index === 0 ? ' top' : '');
+                    row.textContent = (index === 0 ? 'TOP · ' : '') + item;
+                    stackView.appendChild(row);
+                });
+            }
+            stackOrder.textContent = stack.length ? 'bottom → top: ' + stack.join(' → ') : 'bottom → top: empty';
+        }
+
+        function renderQueue() {
+            queueView.innerHTML = '';
+            if (queue.length === 0) {
+                var emptyQueue = document.createElement('div');
+                emptyQueue.className = 'ds-empty';
+                emptyQueue.textContent = 'Empty queue — add a passenger first.';
+                queueView.appendChild(emptyQueue);
+            } else {
+                queue.forEach(function (person, index) {
+                    var row = document.createElement('div');
+                    row.className = 'ds-item queue-item' + (index === 0 ? ' front' : '');
+                    row.textContent = (index === 0 ? 'FRONT · ' : '') + person;
+                    queueView.appendChild(row);
+                });
+            }
+            queueOrder.textContent = queue.length ? 'front → back: ' + queue.join(' → ') : 'front → back: empty';
+        }
+
+        document.getElementById('ds-add-stack').addEventListener('click', function () {
+            var item = newFood[foodIndex % newFood.length];
+            foodIndex = foodIndex + 1;
+            stack.push(item);
+            renderStack();
+            trace.textContent = 'stack.push("' + item + '")  →  the newest item is now on TOP (LIFO)';
+        });
+
+        document.getElementById('ds-pop-stack').addEventListener('click', function () {
+            if (stack.length === 0) {
+                trace.textContent = 'stack.pop()  →  nothing to serve; the stack is empty';
+                return;
+            }
+            var served = stack.pop();
+            renderStack();
+            trace.textContent = 'stack.pop()  →  served "' + served + '" — the newest item came out first (LIFO)';
+        });
+
+        document.getElementById('ds-add-queue').addEventListener('click', function () {
+            var person = newPeople[peopleIndex % newPeople.length];
+            peopleIndex = peopleIndex + 1;
+            queue.push(person);
+            renderQueue();
+            trace.textContent = 'queue.enqueue("' + person + '")  →  joined the BACK of the line (FIFO)';
+        });
+
+        document.getElementById('ds-shift-queue').addEventListener('click', function () {
+            if (queue.length === 0) {
+                trace.textContent = 'queue.dequeue()  →  nobody is waiting; the queue is empty';
+                return;
+            }
+            var called = queue.shift();
+            renderQueue();
+            trace.textContent = 'queue.dequeue()  →  called "' + called + '" — the oldest passenger was served first (FIFO)';
+        });
+
+        document.getElementById('ds-reset').addEventListener('click', function () {
+            stack = ['Chips', 'Beef kota', 'Vetkoek'];
+            queue = ['Thabo', 'Zinhle', 'Pieter'];
+            foodIndex = 0;
+            peopleIndex = 0;
+            renderStack();
+            renderQueue();
+            trace.textContent = '# reset — compare stack.pop() with queue.dequeue()';
+        });
+
+        renderStack();
+        renderQueue();
+    </script>
+    <script src="../static/legacy-copy.js"></script>
+    <script src="../static/language.js"></script>
+</body>
+</html>

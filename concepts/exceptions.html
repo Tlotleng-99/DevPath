@@ -1,0 +1,227 @@
+<!doctype html>
+
+
+<html lang="en">
+
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Load Shedding Survival · Mzansi Code</title>
+
+
+    <link rel="stylesheet" href="../static/style.css">
+
+</head>
+<body>
+    <div class="ticker">
+        <div class="ticker-track">
+            ★ ye!bo! Learn coding the Mzansi way ★ fatcakes &amp; algorithms ★ kwa taxi rank queues ★ spaza shop data structures ★ sharp sharp ★
+            ★ ye!bo! Learn coding the Mzansi way ★ fatcakes &amp; algorithms ★ kwa taxi rank queues ★ spaza shop data structures ★ sharp sharp ★
+        </div>
+    </div>
+    <nav class="topbar">
+
+        <a class="brand" href="../index.html"><span class="flagdot">🇿🇦</span> Mzansi&nbsp;Code</a>
+        <div class="links">
+            <a href="../index.html">Home</a>
+            
+            <a href="../foundations/index.html">Computers</a>
+            
+            <a href="../algorithms/index.html">Algorithms</a>
+            
+            <a href="index.html">Coding Concepts</a>
+        </div>
+
+    </nav>
+
+    <div class="flagstrip">
+        <i class="r"></i><i class="y"></i><i class="g"></i><i class="b"></i><i class="k"></i><i class="w"></i>
+    </div>
+    <main>  
+    <header class="lesson-header">
+
+        <p class="crumb"><a href="index.html">← Coding Concepts</a></p>
+
+        <span class="hero-kicker">When things go wrong, have a plan B</span>
+
+        <h1 class="lesson-title"><span class="emoji-badge">🔌</span> Load Shedding Survival</h1>
+
+        <p class="lesson-tag">Code fails. A good program expects that failure, catches it, and carries on with plan B — like Eskom dipping the lights on you.</p>
+
+    </header>
+
+    <div class="lesson-body">
+        <div>
+            <div class="panel">
+                <h2>Try it yourself <span class="live">live</span></h2>
+                <p>You need to charge the phone, but the grid might cut the lights. Each attempt asks: try it... and if it fails, catch it and switch to the power bank.</p>
+                <div class="stage">
+                    
+        <div class="ex-stage">
+            <div class="ex-phone" id="ex-phone">📱🔋</div>
+            <div class="ex-message" id="ex-msg">Ready to try charging…</div>
+            <button class="green" id="ex-try">🔌 try: charge_phone()</button>
+            <pre class="code-note ex-code">try:
+    charge_phone()              # risky!
+except LoadSheddingError:
+    switch_to_power_bank()      # plan B, phone saved</pre>
+        </div>
+        
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            
+        <h2>The proper cs name</h2>
+        <p>An <strong>exception</strong> is an error raised at runtime. If you don't catch it, the program crashes. If you do — it recovers and keeps living.</p>
+        <ul>
+            <li><code>try:</code> — put the risky work here.</li>
+            <li><code>except SomeError:</code> — catch exactly that problem.</li>
+            <li><code>finally:</code> — cleanup that always runs.</li>
+        </ul>
+        <pre class="code-note">try:
+    phone = charge(phone)
+except LoadSheddingError:
+    phone = charge_from(power_bank)   # plan B
+except BatteryExplosion:
+    run()                              # plan C 🏃
+else:
+    celebrate()                        # no errors 👍
+finally:
+    unplug_stuff()                     # always runs</pre>
+        <p><strong>Where they live:</strong> opening files that may not exist, reading network data, user input that is garbage, dividing by zero. Robust code is code that catches.</p>
+        
+        </div>
+    </div>
+
+    <h2 class="section-title">The story, slowly 🧠</h2>
+    <div class="explain-list" style="--acc: #dc2626">
+        
+        <div class="explain-item"><span class="n">1</span><div><h3>Things go wrong — yoh</h3><p>Load shedding strikes. Your code hits an error it didn&#39;t ask for. Untreated, the whole program crashes like a blackout.</p></div></div>
+        
+        <div class="explain-item"><span class="n">2</span><div><h3>Try the risky thing</h3><p>You put the risky step inside try. The program attempts it and watches closely — it doesn&#39;t jump ship at the sign of trouble.</p></div></div>
+        
+        <div class="explain-item"><span class="n">3</span><div><h3>Except catches it</h3><p>If the error appears, the except block grabs it and switches to plan B: power bank. The program keeps running instead of dying.</p></div></div>
+        
+        <div class="explain-item"><span class="n">4</span><div><h3>Crash-proofing</h3><p>Real-world code is full of try/except — bad files, flaky internet, human typos. Good devs design for failure: they expect load shedding.</p></div></div>
+
+        
+    </div>
+
+
+    <div class="nav-other">
+
+        <p class="crumb">Next lesson →</p>
+
+        <div class="grid mini">
+            
+            <a class="card mini" href="functions.html" style="--acc: #e11d48"><span class="card-stripe"></span><div class="card-emoji">🍲</div><h3>The Pap Recipe</h3><span class="card-link">Open →</span></a>
+            
+            <a class="card mini" href="variables.html" style="--acc: #f97316"><span class="card-stripe"></span><div class="card-emoji">🏪</div><h3>The Spaza Stash</h3><span class="card-link">Open →</span></a>
+            
+            <a class="card mini" href="conditionals.html" style="--acc: #65a30d"><span class="card-stripe"></span><div class="card-emoji">🧍</div><h3>Taxi or Walk?</h3><span class="card-link">Open →</span></a>
+
+            <a class="card mini" href="loops.html" style="--acc: #0d9488"><span class="card-stripe"></span><div class="card-emoji">🍳</div><h3>Fry Until the Pot is Empty</h3><span class="card-link">Open →</span></a>
+            
+            <a class="card mini" href="libraries.html" style="--acc: #7c3aed"><span class="card-stripe"></span><div class="card-emoji">🌶️</div><h3>Don&#39;t Grind It, Import It</h3><span class="card-link">Open →</span></a>
+            <a class="card mini" href="unit-tests.html" style="--acc: #059669"><span class="card-stripe"></span><div class="card-emoji">🥘</div><h3>Tasting the Potjie</h3><span class="card-link">Open →</span></a>
+            <a class="card mini" href="file-io.html" style="--acc: #92400e"><span class="card-stripe"></span><div class="card-emoji">📒</div><h3>The Spaza Notebook</h3><span class="card-link">Open →</span></a>
+            <a class="card mini" href="regex.html" style="--acc: #4f46e5"><span class="card-stripe"></span><div class="card-emoji">🔍</div><h3>CV Skena (Regex)</h3><span class="card-link">Open →</span></a>
+            <a class="card mini" href="oop.html" style="--acc: #1d4ed8"><span class="card-stripe"></span><div class="card-emoji">🚐</div><h3>The Kombi Blueprint</h3><span class="card-link">Open →</span></a>
+            
+            <a class="card mini" href="data-structures.html" style="--acc: #0f766e"><span class="card-stripe"></span><div class="card-emoji">🧱</div><h3>The Kasi Line-Up</h3><span class="card-link">Open →</span></a>
+            
+            
+        </div>
+    </div>
+
+    
+    <script>
+        
+        var msg = document.getElementById('ex-msg');
+        var phone = document.getElementById('ex-phone');
+        var busy = false;
+        document.getElementById('ex-try').addEventListener('click', function () {
+            if (busy) return;
+            busy = true;
+            msg.textContent = 'try: charge_phone() …';
+            msg.className = 'ex-message working';
+            setTimeout(function () {
+                var fail = Math.random() < 0.5;
+                if (fail) {
+                    msg.textContent = '💥 LoadSheddingError: “No, load shedding 2 tonight.”';
+                    msg.className = 'ex-message fail';
+                    setTimeout(function () {
+                        msg.textContent = 'except: switched to power bank 🔋 → phone at 100%!';
+                        msg.className = 'ex-message ok';
+                        phone.textContent = '📱🔋';
+                        busy = false;
+                    }, 900);
+                } else {
+                    msg.textContent = '✅ charge_phone() worked → phone at 100% ⚡';
+                    msg.className = 'ex-message ok';
+                    phone.textContent = '📱⚡';
+                    busy = false;
+                }
+            }, 900);
+        });
+        
+    </script>
+    
+
+    </main>
+
+    <div class="flagstrip">
+        <i class="r"></i><i class="y"></i><i class="g"></i><i class="b"></i><i class="k"></i><i class="w"></i>
+    </div>
+
+    <footer class="footer">
+
+        <strong>Mzansi Code</strong> — built by a South African, for South African students.<br>
+
+        Every CS concept already lives in your everyday. We just gave it a fancy name. 💚💛
+
+    </footer>
+
+    
+    <script>
+        
+        var msg = document.getElementById('ex-msg');
+        var phone = document.getElementById('ex-phone');
+        var busy = false;
+        document.getElementById('ex-try').addEventListener('click', function () {
+            if (busy) return;
+            busy = true;
+            msg.textContent = 'try: charge_phone() …';
+            msg.className = 'ex-message working';
+            setTimeout(function () {
+                var fail = Math.random() < 0.5;
+                if (fail) {
+                    msg.textContent = '💥 LoadSheddingError: “No, load shedding 2 tonight.”';
+                    msg.className = 'ex-message fail';
+                    setTimeout(function () {
+                        msg.textContent = 'except: switched to power bank 🔋 → phone at 100%!';
+                        msg.className = 'ex-message ok';
+                        phone.textContent = '📱🔋';
+                        busy = false;
+                    }, 900);
+                } else {
+                    msg.textContent = '✅ charge_phone() worked → phone at 100% ⚡';
+                    msg.className = 'ex-message ok';
+                    phone.textContent = '📱⚡';
+                    busy = false;
+                }
+            }, 900);
+        });
+        
+    </script>
+    
+    <script src="../static/legacy-copy.js"></script>
+    <script src="../static/language.js"></script>
+</body>
+</html>
