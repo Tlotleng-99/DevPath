@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Kombi Blueprint · Mzansi Code</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="ticker">
+        <div class="ticker-track">
+            ★ ye!bo! Learn coding the Mzansi way ★ fatcakes &amp; algorithms ★ kwa taxi rank queues ★ spaza shop data structures ★ sharp sharp ★
+            ★ ye!bo! Learn coding the Mzansi way ★ fatcakes &amp; algorithms ★ kwa taxi rank queues ★ spaza shop data structures ★ sharp sharp ★
+        </div>
+    </div>
+
+    <nav class="topbar">
+        <a class="brand" href="../index.html"><span class="flagdot">🇿🇦</span> Mzansi&nbsp;Code</a>
+        <div class="links">
+            <a href="../index.html">Home</a>
+            
+            <a href="../foundations/index.html">Computers</a>
+            
+            <a href="../algorithms/index.html">Algorithms</a>
+            
+            <a href="index.html">Coding Concepts</a>
+            
+        </div>
+    </nav>
+
+    <div class="flagstrip">
+        <i class="r"></i><i class="y"></i><i class="g"></i><i class="b"></i><i class="k"></i><i class="w"></i>
+    </div>
+
+    <main>
+        
+    <header class="lesson-header">
+        <p class="crumb"><a href="index.html">← Coding Concepts</a></p>
+        <span class="hero-kicker">Blueprint → real things</span>
+        <h1 class="lesson-title"><span class="emoji-badge">🚐</span> The Kombi Blueprint</h1>
+        <p class="lesson-tag">The class is the blueprint; each real kombi is an object with its own colour, route, and a hooter that works.</p>
+    </header>
+
+    <div class="lesson-body">
+        <div>
+            <div class="panel">
+                <h2>Try it yourself <span class="live">live</span></h2>
+                <p>Build kombis from the Kombi class. Each one you build is its own object: pick colour and route, then hooter() and drive() on that kombi only.</p>
+                <div class="stage">
+                    
+        <div class="oop-stage">
+            <div class="oop-build">
+                <label>Route
+                    <select id="oop-route">
+                        <option>Soweto → CBD</option>
+                        <option>Diepsloot line</option>
+                        <option>Mamelodi run</option>
+                    </select>
+                </label>
+                <label>Colour
+                    <select id="oop-colour">
+                        <option value="#ffb612">Yellow taxi</option>
+                        <option value="#1d4ed8">Blue taxi</option>
+                        <option value="#00843d">Green taxi</option>
+                    </select>
+                </label>
+                <button class="green" id="oop-build">🔨 Build from the blueprint</button>
+            </div>
+            <pre class="code-note" id="oop-code">class Kombi:
+    def __init__(self, colour, route):
+        self.colour = colour
+        self.route = route
+    def hooter(self):
+        return "Phiphi! 🚐"
+    def drive(self):
+        return "ka-chow, moving!"</pre>
+            <div class="kombi-row" id="oop-row"></div>
+        </div>
+        
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            
+        <h2>The proper cs name</h2>
+        <p><strong>Object-oriented programming</strong> bundles data (attributes) and behaviour (methods) into one unit — an <em>object</em>, made from a <em>class</em> blueprint.</p>
+        <ul>
+            <li><strong>Class</strong> = the blueprint (never drives anywhere).</li>
+            <li><strong>Object</strong> = a real instance built from it.</li>
+            <li><strong>Attributes</strong> = state: colour, route, seats.</li>
+            <li><strong>Methods</strong> = behaviour: hooter(), drive().</li>
+        </ul>
+        <pre class="code-note">class Kombi:
+    def __init__(self, colour, route, seats=15):
+        self.colour = colour
+        self.route = route
+
+inbound = Kombi(colour="yellow", route="Soweto → CBD")
+loading  = Kombi(colour="blue",  route="Mamelodi run")
+
+inbound.hooter()   # "Phiphi! 🚐"
+inbound.route      # "Soweto → CBD"</pre>
+        <p><strong>Where they live:</strong> game characters, GUI widgets, Django models, user accounts — anywhere real-world 'things' with state and behaviour exist.</p>
+        
+        </div>
+    </div>
+
+    <h2 class="section-title">The story, slowly 🧠</h2>
+    <div class="explain-list" style="--acc: #1d4ed8">
+        
+        <div class="explain-item"><span class="n">1</span><div><h3>Blueprint vs kombi</h3><p>The class is the paper plan: seats, hooter, route slot. The paper itself can&#39;t drive anywhere. The plan must be brought to life.</p></div></div>
+        
+        <div class="explain-item"><span class="n">2</span><div><h3>Instantiate = build</h3><p>Kombi(...) uses the blueprint to build a real kombi. Now it exists on the road with its own colour and route.</p></div></div>
+        
+        <div class="explain-item"><span class="n">3</span><div><h3>Each object is its own</h3><p>Two kombis from the same blueprint are independent. Paint one blue, change the other&#39;s route — they don&#39;t affect each other.</p></div></div>
+        
+        <div class="explain-item"><span class="n">4</span><div><h3>State + behaviour</h3><p>Attributes are what it has; methods are what it does. That pairing — data and action living together — is the whole point of OOP.</p></div></div>
+        
+    </div>
+
+    <div class="nav-other">
+        <p class="crumb">Next lesson →</p>
+        <div class="grid mini">
+            
+            
+            <a class="card mini" href="functions.html" style="--acc: #e11d48"><span class="card-stripe"></span><div class="card-emoji">🍲</div><h3>The Pap Recipe</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="variables.html" style="--acc: #f97316"><span class="card-stripe"></span><div class="card-emoji">🏪</div><h3>The Spaza Stash</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="conditionals.html" style="--acc: #65a30d"><span class="card-stripe"></span><div class="card-emoji">🧍</div><h3>Taxi or Walk?</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="loops.html" style="--acc: #0d9488"><span class="card-stripe"></span><div class="card-emoji">🍳</div><h3>Fry Until the Pot is Empty</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="exceptions.html" style="--acc: #dc2626"><span class="card-stripe"></span><div class="card-emoji">🔌</div><h3>Load Shedding Survival</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="libraries.html" style="--acc: #7c3aed"><span class="card-stripe"></span><div class="card-emoji">🌶️</div><h3>Don&#39;t Grind It, Import It</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="unit-tests.html" style="--acc: #059669"><span class="card-stripe"></span><div class="card-emoji">🥘</div><h3>Tasting the Potjie</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="file-io.html" style="--acc: #92400e"><span class="card-stripe"></span><div class="card-emoji">📒</div><h3>The Spaza Notebook</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="regex.html" style="--acc: #4f46e5"><span class="card-stripe"></span><div class="card-emoji">🔍</div><h3>CV Skena (Regex)</h3><span class="card-link">Open →</span></a>
+            
+            <a class="card mini" href="data-structures.html" style="--acc: #0f766e"><span class="card-stripe"></span><div class="card-emoji">🧱</div><h3>The Kasi Line-Up</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            
+        </div>
+    </div>
+
+    
+    <script>
+        
+        var row = document.getElementById('oop-row');
+        var code = document.getElementById('oop-code');
+        var kombis = [];
+        var nameIdx = 0;
+        var classicNames = ['Jaws of Life', 'Amukelani', 'No Sweat', 'Da Yung Raw'];
+        function buildKombi() {
+            var colour = document.getElementById('oop-colour').value;
+            var route = document.getElementById('oop-route').value;
+            var name = classicNames[nameIdx % classicNames.length];
+            nameIdx = nameIdx + 1;
+            var k = { name: name, colour: colour, route: route };
+            kombis.push(k);
+            renderKombis();
+            code.textContent = 'kombi = Kombi(colour="' + colour + '", route="' + route + '")';
+        }
+        function renderKombis() {
+            row.innerHTML = '';
+            kombis.forEach(function (k, idx) {
+                var card = document.createElement('div');
+                card.className = 'kombi-card';
+                card.style.setProperty('--kc', k.colour);
+                card.innerHTML =
+                    '<div class="kombi-emoji">🚐</div>' +
+                    '<div class="kombi-name">' + k.name + '</div>' +
+                    '<div class="kombi-attr">route: <b>' + k.route + '</b></div>' +
+                    '<div class="kombi-attr">colour: <b>' + k.colour + '</b></div>' +
+                    '<div class="kf" id="kf-' + idx + '"></div>' +
+                    '<div class="controls klein">' +
+                    '  <button class="yellow" id="hoot-' + idx + '">hooter()</button>' +
+                    '  <button class="blue" id="drv-' + idx + '">drive()</button>' +
+                    '</div>';
+                row.appendChild(card);
+                document.getElementById('hoot-' + idx).addEventListener('click', function () {
+                    var f = document.getElementById('kf-' + idx);
+                    f.textContent = 'Phiphi! 🚐';
+                    f.classList.remove('flash');
+                    void f.offsetWidth;
+                    f.classList.add('flash');
+                });
+                document.getElementById('drv-' + idx).addEventListener('click', function () {
+                    var e = card.querySelector('.kombi-emoji');
+                    e.classList.remove('drive');
+                    void e.offsetWidth;
+                    e.classList.add('drive');
+                    card.querySelector('.kf').textContent = 'ka-chow, moving!';
+                });
+            });
+        }
+        document.getElementById('oop-build').addEventListener('click', buildKombi);
+        buildKombi();
+        
+    </script>
+    
+
+    </main>
+
+    <div class="flagstrip">
+        <i class="r"></i><i class="y"></i><i class="g"></i><i class="b"></i><i class="k"></i><i class="w"></i>
+    </div>
+
+    <footer class="footer">
+        <strong>Mzansi Code</strong> — built by a South African, for South African students.<br>
+        Every CS concept already lives in your everyday. We just gave it a fancy name. 💚💛
+    </footer>
+
+    
+    <script>
+        
+        var row = document.getElementById('oop-row');
+        var code = document.getElementById('oop-code');
+        var kombis = [];
+        var nameIdx = 0;
+        var classicNames = ['Jaws of Life', 'Amukelani', 'No Sweat', 'Da Yung Raw'];
+        function buildKombi() {
+            var colour = document.getElementById('oop-colour').value;
+            var route = document.getElementById('oop-route').value;
+            var name = classicNames[nameIdx % classicNames.length];
+            nameIdx = nameIdx + 1;
+            var k = { name: name, colour: colour, route: route };
+            kombis.push(k);
+            renderKombis();
+            code.textContent = 'kombi = Kombi(colour="' + colour + '", route="' + route + '")';
+        }
+        function renderKombis() {
+            row.innerHTML = '';
+            kombis.forEach(function (k, idx) {
+                var card = document.createElement('div');
+                card.className = 'kombi-card';
+                card.style.setProperty('--kc', k.colour);
+                card.innerHTML =
+                    '<div class="kombi-emoji">🚐</div>' +
+                    '<div class="kombi-name">' + k.name + '</div>' +
+                    '<div class="kombi-attr">route: <b>' + k.route + '</b></div>' +
+                    '<div class="kombi-attr">colour: <b>' + k.colour + '</b></div>' +
+                    '<div class="kf" id="kf-' + idx + '"></div>' +
+                    '<div class="controls klein">' +
+                    '  <button class="yellow" id="hoot-' + idx + '">hooter()</button>' +
+                    '  <button class="blue" id="drv-' + idx + '">drive()</button>' +
+                    '</div>';
+                row.appendChild(card);
+                document.getElementById('hoot-' + idx).addEventListener('click', function () {
+                    var f = document.getElementById('kf-' + idx);
+                    f.textContent = 'Phiphi! 🚐';
+                    f.classList.remove('flash');
+                    void f.offsetWidth;
+                    f.classList.add('flash');
+                });
+                document.getElementById('drv-' + idx).addEventListener('click', function () {
+                    var e = card.querySelector('.kombi-emoji');
+                    e.classList.remove('drive');
+                    void e.offsetWidth;
+                    e.classList.add('drive');
+                    card.querySelector('.kf').textContent = 'ka-chow, moving!';
+                });
+            });
+        }
+        document.getElementById('oop-build').addEventListener('click', buildKombi);
+        buildKombi();
+        
+    </script>
+    
+    <script src="../static/legacy-copy.js"></script>
+    <script src="../static/language.js"></script>
+</body>
+</html>
