@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CV Skena (Regex) · Mzansi Code</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="ticker">
+        <div class="ticker-track">
+            ★ ye!bo! Learn coding the Mzansi way ★ fatcakes &amp; algorithms ★ kwa taxi rank queues ★ spaza shop data structures ★ sharp sharp ★
+            ★ ye!bo! Learn coding the Mzansi way ★ fatcakes &amp; algorithms ★ kwa taxi rank queues ★ spaza shop data structures ★ sharp sharp ★
+        </div>
+    </div>
+
+    <nav class="topbar">
+        <a class="brand" href="../index.html"><span class="flagdot">🇿🇦</span> Mzansi&nbsp;Code</a>
+        <div class="links">
+            <a href="../index.html">Home</a>
+            
+            <a href="../foundations/index.html">Computers</a>
+            
+            <a href="../algorithms/index.html">Algorithms</a>
+            
+            <a href="index.html">Coding Concepts</a>
+            
+        </div>
+    </nav>
+
+    <div class="flagstrip">
+        <i class="r"></i><i class="y"></i><i class="g"></i><i class="b"></i><i class="k"></i><i class="w"></i>
+    </div>
+
+    <main>
+        
+    <header class="lesson-header">
+        <p class="crumb"><a href="index.html">← Coding Concepts</a></p>
+        <span class="hero-kicker">Pattern-based treasure hunt</span>
+        <h1 class="lesson-title"><span class="emoji-badge">🔍</span> CV Skena (Regex)</h1>
+        <p class="lesson-tag">Instead of reading every line, regex hunts text by pattern: find the numbers, find the emails, find the prices. Skena ke skena.</p>
+    </header>
+
+    <div class="lesson-body">
+        <div>
+            <div class="panel">
+                <h2>Try it yourself <span class="live">live</span></h2>
+                <p>This is a scrap of a CV. Pick a pattern and regex scans the whole text in one pass, highlighting every match and counting it.</p>
+                <div class="stage">
+                    
+        <div class="regex-stage">
+            <div class="cv-text" id="regex-text"></div>
+            <div class="controls">
+                <button class="blue" id="rx-phone">📱 SA numbers</button>
+                <button class="yellow" id="rx-email">📧 Emails</button>
+                <button class="green" id="rx-price">💰 Prices</button>
+            </div>
+            <pre class="trace" id="regex-trace"># pick a pattern to search for</pre>
+        </div>
+        
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            
+        <h2>The proper cs name</h2>
+        <p>A <strong>regular expression</strong> (regex) is a pattern that searches text. One pattern can validate or extract in a way manual code can't touch.</p>
+        <ul>
+            <li><code>\d</code> — any digit.</li>
+            <li><code>[0-9]</code> — digits 0 to 9.</li>
+            <li><code>+</code> — 'one or more of the thing before'.</li>
+            <li><code>^…$</code> — anchor start and end.</li>
+        </ul>
+        <pre class="code-note">import re
+
+# does this look like a SA cell number?
+pattern = r"^0[678]\d{8}$"
+if re.match(pattern, "0825551234"):
+    print("Yep, valid Mzansi number! ✓")</pre>
+        <p><strong>Where they live:</strong> form validation, log filtering, search-and-replace, scraping, and checking that an email looks like an email.</p>
+        
+        </div>
+    </div>
+
+    <h2 class="section-title">The story, slowly 🧠</h2>
+    <div class="explain-list" style="--acc: #4f46e5">
+        
+        <div class="explain-item"><span class="n">1</span><div><h3>Don&#39;t read it — scan it</h3><p>Reading 200 CVs line by line is sleep therapy. Regex scans the whole pile for one pattern in a blink, like a barcode reader.</p></div></div>
+        
+        <div class="explain-item"><span class="n">2</span><div><h3>The pattern is the language</h3><p>0[678]\d{8} says: starts with 0, then 6/7/8, then 8 more digits. Every metacharacter is a rule your pattern must obey.</p></div></div>
+        
+        <div class="explain-item"><span class="n">3</span><div><h3>Match, not guess</h3><p>Regex doesn&#39;t eyeball — it matches the rule exactly. &#39;0825551234&#39; passes the rule; &#39;5551234&#39; doesn&#39;t, because the rule is strict.</p></div></div>
+        
+        <div class="explain-item"><span class="n">4</span><div><h3>Validate and extract</h3><p>Two superpowers: validate (is the number real?) and extract (pull every price out of this document). One pattern, both prizes.</p></div></div>
+        
+    </div>
+
+    <div class="nav-other">
+        <p class="crumb">Next lesson →</p>
+        <div class="grid mini">
+            
+            
+            <a class="card mini" href="functions.html" style="--acc: #e11d48"><span class="card-stripe"></span><div class="card-emoji">🍲</div><h3>The Pap Recipe</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="variables.html" style="--acc: #f97316"><span class="card-stripe"></span><div class="card-emoji">🏪</div><h3>The Spaza Stash</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="conditionals.html" style="--acc: #65a30d"><span class="card-stripe"></span><div class="card-emoji">🧍</div><h3>Taxi or Walk?</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="loops.html" style="--acc: #0d9488"><span class="card-stripe"></span><div class="card-emoji">🍳</div><h3>Fry Until the Pot is Empty</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="exceptions.html" style="--acc: #dc2626"><span class="card-stripe"></span><div class="card-emoji">🔌</div><h3>Load Shedding Survival</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="libraries.html" style="--acc: #7c3aed"><span class="card-stripe"></span><div class="card-emoji">🌶️</div><h3>Don&#39;t Grind It, Import It</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="unit-tests.html" style="--acc: #059669"><span class="card-stripe"></span><div class="card-emoji">🥘</div><h3>Tasting the Potjie</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="file-io.html" style="--acc: #92400e"><span class="card-stripe"></span><div class="card-emoji">📒</div><h3>The Spaza Notebook</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            
+            
+            <a class="card mini" href="oop.html" style="--acc: #1d4ed8"><span class="card-stripe"></span><div class="card-emoji">🚐</div><h3>The Kombi Blueprint</h3><span class="card-link">Open →</span></a>
+            
+            <a class="card mini" href="data-structures.html" style="--acc: #0f766e"><span class="card-stripe"></span><div class="card-emoji">🧱</div><h3>The Kasi Line-Up</h3><span class="card-link">Open →</span></a>
+            
+            
+        </div>
+    </div>
+
+    
+    <script>
+        
+        var textEl = document.getElementById('regex-text');
+        var trace = document.getElementById('regex-trace');
+        var SAMPLE = 'My CV: call Thabo on 0825551234 \u2022 email lindi@code.co.za \u2022 ' +
+                     'I charge R250 per hour for tutor \u2022 campus line 0115557788 \u2022 ' +
+                     'or reach zane@tut.ac.za \u2022 cost of my laptop R12,500 budgets R800 monthly.';
+        var PATTERNS = {
+            phone: { p: '0[678]\d{8}', label: '📱 SA numbers', long: '0[678]\d{8}' },
+            email: { p: '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}', label: '📧 Emails', long: '\w+@\w+\.\w+' },
+            price: { p: 'R\d[\.\,]?\d*', label: '💰 Prices', long: 'R\d+' }
+        };
+        function skena(key) {
+            var cfg = PATTERNS[key];
+            var re = new RegExp(cfg.p, 'g');
+            var matches = SAMPLE.match(re) || [];
+            var i = 0;
+            var highlighted = SAMPLE.replace(re, function () {
+                return '<mark>' + matches[i++] + '</mark>';
+            });
+            textEl.innerHTML = highlighted;
+            trace.textContent = 're.pattern /' + cfg.long + '/  →  found ' + matches.length + ' match(es): ' + matches.join(', ');
+        }
+        textEl.textContent = SAMPLE;
+        document.getElementById('rx-phone').addEventListener('click', function () { skena('phone'); });
+        document.getElementById('rx-email').addEventListener('click', function () { skena('email'); });
+        document.getElementById('rx-price').addEventListener('click', function () { skena('price'); });
+        
+    </script>
+    
+
+    </main>
+
+    <div class="flagstrip">
+        <i class="r"></i><i class="y"></i><i class="g"></i><i class="b"></i><i class="k"></i><i class="w"></i>
+    </div>
+
+    <footer class="footer">
+        <strong>Mzansi Code</strong> — built by a South African, for South African students.<br>
+        Every CS concept already lives in your everyday. We just gave it a fancy name. 💚💛
+    </footer>
+
+    
+    <script>
+        
+        var textEl = document.getElementById('regex-text');
+        var trace = document.getElementById('regex-trace');
+        var SAMPLE = 'My CV: call Thabo on 0825551234 \u2022 email lindi@code.co.za \u2022 ' +
+                     'I charge R250 per hour for tutor \u2022 campus line 0115557788 \u2022 ' +
+                     'or reach zane@tut.ac.za \u2022 cost of my laptop R12,500 budgets R800 monthly.';
+        var PATTERNS = {
+            phone: { p: '0[678]\d{8}', label: '📱 SA numbers', long: '0[678]\d{8}' },
+            email: { p: '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}', label: '📧 Emails', long: '\w+@\w+\.\w+' },
+            price: { p: 'R\d[\.\,]?\d*', label: '💰 Prices', long: 'R\d+' }
+        };
+        function skena(key) {
+            var cfg = PATTERNS[key];
+            var re = new RegExp(cfg.p, 'g');
+            var matches = SAMPLE.match(re) || [];
+            var i = 0;
+            var highlighted = SAMPLE.replace(re, function () {
+                return '<mark>' + matches[i++] + '</mark>';
+            });
+            textEl.innerHTML = highlighted;
+            trace.textContent = 're.pattern /' + cfg.long + '/  →  found ' + matches.length + ' match(es): ' + matches.join(', ');
+        }
+        textEl.textContent = SAMPLE;
+        document.getElementById('rx-phone').addEventListener('click', function () { skena('phone'); });
+        document.getElementById('rx-email').addEventListener('click', function () { skena('email'); });
+        document.getElementById('rx-price').addEventListener('click', function () { skena('price'); });
+        
+    </script>
+    
+    <script src="../static/legacy-copy.js"></script>
+    <script src="../static/language.js"></script>
+</body>
+</html>
