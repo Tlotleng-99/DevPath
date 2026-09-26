@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Spaza Notebook · Mzansi Code</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="ticker">
+        <div class="ticker-track">
+            ★ ye!bo! Learn coding the Mzansi way ★ fatcakes &amp; algorithms ★ kwa taxi rank queues ★ spaza shop data structures ★ sharp sharp ★
+            ★ ye!bo! Learn coding the Mzansi way ★ fatcakes &amp; algorithms ★ kwa taxi rank queues ★ spaza shop data structures ★ sharp sharp ★
+        </div>
+    </div>
+
+    <nav class="topbar">
+        <a class="brand" href="../index.html"><span class="flagdot">🇿🇦</span> Mzansi&nbsp;Code</a>
+        <div class="links">
+            <a href="../index.html">Home</a>
+            
+            <a href="../foundations/index.html">Computers</a>
+            
+            <a href="../algorithms/index.html">Algorithms</a>
+            
+            <a href="index.html">Coding Concepts</a>
+            
+        </div>
+    </nav>
+
+    <div class="flagstrip">
+        <i class="r"></i><i class="y"></i><i class="g"></i><i class="b"></i><i class="k"></i><i class="w"></i>
+    </div>
+
+    <main>
+        
+    <header class="lesson-header">
+        <p class="crumb"><a href="index.html">← Coding Concepts</a></p>
+        <span class="hero-kicker">Save data, read it back later</span>
+        <h1 class="lesson-title"><span class="emoji-badge">📒</span> The Spaza Notebook</h1>
+        <p class="lesson-tag">RAM forgets when you switch off. The spaza notebook remembers — writing to a file is how programs remember across restarts.</p>
+    </header>
+
+    <div class="lesson-body">
+        <div>
+            <div class="panel">
+                <h2>Try it yourself <span class="live">live</span></h2>
+                <p>The notebook is a file. Jot each sale (write), total the takings (read), start a fresh page (clear). The data lives after the page closes.</p>
+                <div class="stage">
+                    
+        <div class="note-stage">
+            <div class="notebook" id="note-book"></div>
+            <div class="controls">
+                <button class="green" id="note-sell">🖊️ Record a sale</button>
+                <button class="yellow" id="note-read">📖 Tally the takings (read)</button>
+                <button class="red" id="note-clear">📄 Start a new page (clear)</button>
+            </div>
+            <pre class="trace" id="note-trace"># open('notebook.txt', 'w') to start fresh</pre>
+        </div>
+        
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            
+        <h2>The proper cs name</h2>
+        <p><strong>File I/O</strong> is reading from and writing to files so data outlives the program. Three modes you will use daily:</p>
+        <ul>
+            <li><code>'r'</code> — read (open the book to check).</li>
+            <li><code>'w'</code> — write (new page, wipes old page).</li>
+            <li><code>'a'</code> — append (add a line without erasing).</li>
+        </ul>
+        <pre class="code-note"># write / append
+with open('takings.txt', 'a') as f:
+    f.write('R40 · maize meal\n')
+
+# read back
+with open('takings.txt', 'r') as f:
+    data = f.read()
+print(data.splitlines())</pre>
+        <p><strong>Where they live:</strong> config files, saved games, logs, databases underneath, analysis pipelines. Any app that remembers you when it restarts.</p>
+        
+        </div>
+    </div>
+
+    <h2 class="section-title">The story, slowly 🧠</h2>
+    <div class="explain-list" style="--acc: #92400e">
+        
+        <div class="explain-item"><span class="n">1</span><div><h3>RAM forgets</h3><p>The moment the program closes, its variables vanish. Only what&#39;s written to a file — the notebook — survives power-off.</p></div></div>
+        
+        <div class="explain-item"><span class="n">2</span><div><h3>Write = jot it down</h3><p>&#39;Record a sale&#39; appends one line to the file. Old lines stay — the notebook grows through the day.</p></div></div>
+        
+        <div class="explain-item"><span class="n">3</span><div><h3>Read = tally it up</h3><p>At close of day you open the book and read each line. Reading a file pulls the saved data back into your program.</p></div></div>
+        
+        <div class="explain-item"><span class="n">4</span><div><h3>Persist or lose it</h3><p>Files are the cheapest memory there is. Every real app leans on them: &#39;remember my username&#39;, &#39;keep my saved game&#39;, &#39;log everything&#39;.</p></div></div>
+        
+    </div>
+
+    <div class="nav-other">
+        <p class="crumb">Next lesson →</p>
+        <div class="grid mini">
+            
+            
+            <a class="card mini" href="functions.html" style="--acc: #e11d48"><span class="card-stripe"></span><div class="card-emoji">🍲</div><h3>The Pap Recipe</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="variables.html" style="--acc: #f97316"><span class="card-stripe"></span><div class="card-emoji">🏪</div><h3>The Spaza Stash</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="conditionals.html" style="--acc: #65a30d"><span class="card-stripe"></span><div class="card-emoji">🧍</div><h3>Taxi or Walk?</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="loops.html" style="--acc: #0d9488"><span class="card-stripe"></span><div class="card-emoji">🍳</div><h3>Fry Until the Pot is Empty</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="exceptions.html" style="--acc: #dc2626"><span class="card-stripe"></span><div class="card-emoji">🔌</div><h3>Load Shedding Survival</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="libraries.html" style="--acc: #7c3aed"><span class="card-stripe"></span><div class="card-emoji">🌶️</div><h3>Don&#39;t Grind It, Import It</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="unit-tests.html" style="--acc: #059669"><span class="card-stripe"></span><div class="card-emoji">🥘</div><h3>Tasting the Potjie</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            
+            
+            <a class="card mini" href="regex.html" style="--acc: #4f46e5"><span class="card-stripe"></span><div class="card-emoji">🔍</div><h3>CV Skena (Regex)</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="oop.html" style="--acc: #1d4ed8"><span class="card-stripe"></span><div class="card-emoji">🚐</div><h3>The Kombi Blueprint</h3><span class="card-link">Open →</span></a>
+            
+            <a class="card mini" href="data-structures.html" style="--acc: #0f766e"><span class="card-stripe"></span><div class="card-emoji">🧱</div><h3>The Kasi Line-Up</h3><span class="card-link">Open →</span></a>
+            
+            
+        </div>
+    </div>
+
+    
+    <script>
+        
+        var book = document.getElementById('note-book');
+        var trace = document.getElementById('note-trace');
+        var sales = [
+            { r: 40, item: 'maize meal' },
+            { r: 25, item: 'airtime R10' },
+            { r: 60, item: 'cool drink' }
+        ];
+        var items = ['maize meal', 'cold drink', 'bread loaf', 'chips', 'airtime'];
+        function renderBook() {
+            book.innerHTML = '<div class="note-title">📒 takings notebook</div>';
+            if (sales.length === 0) {
+                book.innerHTML += '<div class="note-line muted">— blank page —</div>';
+            }
+            sales.forEach(function (s, i) {
+                book.innerHTML += '<div class="note-line"><span>' + (i + 1) + '.</span> R' + s.r + ' · ' + s.item + '</div>';
+            });
+        }
+        function sumTakings() {
+            return sales.reduce(function (acc, s) { return acc + s.r; }, 0);
+        }
+        document.getElementById('note-sell').addEventListener('click', function () {
+            var r = 20 + Math.floor(Math.random() * 7) * 5;
+            var item = items[Math.floor(Math.random() * items.length)];
+            sales.push({ r: r, item: item });
+            renderBook();
+            trace.textContent = "f.write('R" + r + " · " + item + "\\n')   # appended";
+        });
+        document.getElementById('note-read').addEventListener('click', function () {
+            var total = sumTakings();
+            trace.textContent = 'f.read() → ' + sales.length + ' lines, total takings = R' + total + ' 💰';
+        });
+        document.getElementById('note-clear').addEventListener('click', function () {
+            sales = [];
+            renderBook();
+            trace.textContent = "open('notebook.txt', 'w')   # blank page for tomorrow";
+        });
+        renderBook();
+        
+    </script>
+    
+
+    </main>
+
+    <div class="flagstrip">
+        <i class="r"></i><i class="y"></i><i class="g"></i><i class="b"></i><i class="k"></i><i class="w"></i>
+    </div>
+
+    <footer class="footer">
+        <strong>Mzansi Code</strong> — built by a South African, for South African students.<br>
+        Every CS concept already lives in your everyday. We just gave it a fancy name. 💚💛
+    </footer>
+
+    
+    <script>
+        
+        var book = document.getElementById('note-book');
+        var trace = document.getElementById('note-trace');
+        var sales = [
+            { r: 40, item: 'maize meal' },
+            { r: 25, item: 'airtime R10' },
+            { r: 60, item: 'cool drink' }
+        ];
+        var items = ['maize meal', 'cold drink', 'bread loaf', 'chips', 'airtime'];
+        function renderBook() {
+            book.innerHTML = '<div class="note-title">📒 takings notebook</div>';
+            if (sales.length === 0) {
+                book.innerHTML += '<div class="note-line muted">— blank page —</div>';
+            }
+            sales.forEach(function (s, i) {
+                book.innerHTML += '<div class="note-line"><span>' + (i + 1) + '.</span> R' + s.r + ' · ' + s.item + '</div>';
+            });
+        }
+        function sumTakings() {
+            return sales.reduce(function (acc, s) { return acc + s.r; }, 0);
+        }
+        document.getElementById('note-sell').addEventListener('click', function () {
+            var r = 20 + Math.floor(Math.random() * 7) * 5;
+            var item = items[Math.floor(Math.random() * items.length)];
+            sales.push({ r: r, item: item });
+            renderBook();
+            trace.textContent = "f.write('R" + r + " · " + item + "\\n')   # appended";
+        });
+        document.getElementById('note-read').addEventListener('click', function () {
+            var total = sumTakings();
+            trace.textContent = 'f.read() → ' + sales.length + ' lines, total takings = R' + total + ' 💰';
+        });
+        document.getElementById('note-clear').addEventListener('click', function () {
+            sales = [];
+            renderBook();
+            trace.textContent = "open('notebook.txt', 'w')   # blank page for tomorrow";
+        });
+        renderBook();
+        
+    </script>
+    
+    <script src="../static/legacy-copy.js"></script>
+    <script src="../static/language.js"></script>
+</body>
+</html>
