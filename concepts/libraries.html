@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Don&#39;t Grind It, Import It · Mzansi Code</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="ticker">
+        <div class="ticker-track">
+            ★ ye!bo! Learn coding the Mzansi way ★ fatcakes &amp; algorithms ★ kwa taxi rank queues ★ spaza shop data structures ★ sharp sharp ★
+            ★ ye!bo! Learn coding the Mzansi way ★ fatcakes &amp; algorithms ★ kwa taxi rank queues ★ spaza shop data structures ★ sharp sharp ★
+        </div>
+    </div>
+
+    <nav class="topbar">
+        <a class="brand" href="../index.html"><span class="flagdot">🇿🇦</span> Mzansi&nbsp;Code</a>
+        <div class="links">
+            <a href="../index.html">Home</a>
+            
+            <a href="../foundations/index.html">Computers</a>
+            
+            <a href="../algorithms/index.html">Algorithms</a>
+            
+            <a href="index.html">Coding Concepts</a>
+            
+        </div>
+    </nav>
+
+    <div class="flagstrip">
+        <i class="r"></i><i class="y"></i><i class="g"></i><i class="b"></i><i class="k"></i><i class="w"></i>
+    </div>
+
+    <main>
+        
+    <header class="lesson-header">
+        <p class="crumb"><a href="index.html">← Coding Concepts</a></p>
+        <span class="hero-kicker">Stand on other people&#39;s work</span>
+        <h1 class="lesson-title"><span class="emoji-badge">🌶️</span> Don&#39;t Grind It, Import It</h1>
+        <p class="lesson-tag">Why grind ten spices from scratch when someone already made the blend? Libraries are the spice rack of programming.</p>
+    </header>
+
+    <div class="lesson-body">
+        <div>
+            <div class="panel">
+                <h2>Try it yourself <span class="live">live</span></h2>
+                <p>Two chefs, one dish. Chef A grinds every spice by hand (10 steps). Chef B imports the trusted mix (1 step). Same flavour, way less work.</p>
+                <div class="stage">
+                    
+        <div class="lib-stage">
+            <div class="lib-kitchen">
+                <div class="lib-chef">
+                    <h4>🧑‍🍳 Chef DIY — 10 spices by hand</h4>
+                    <div class="lib-log" id="lib-diy"></div>
+                    <button class="red" id="lib-run-diy">▶ Grind from scratch</button>
+                </div>
+                <div class="lib-chef">
+                    <h4>🧑‍🍳 Chef Import — the ready mix</h4>
+                    <div class="lib-log" id="lib-lib"></div>
+                    <button class="green" id="lib-run-lib">▶ Import the library</button>
+                </div>
+            </div>
+            <div class="lib-vs" id="lib-vs"></div>
+        </div>
+        
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            
+        <h2>The proper cs name</h2>
+        <p>A <strong>library</strong> (or package/module) is code someone else wrote, debugged and polished — which you pull in and reuse instead of rewriting.</p>
+        <ul>
+            <li><code>import requests</code> — pull in a library.</li>
+            <li><code>import math, re</code> — many at once.</li>
+            <li><code>from datetime import datetime</code> — grab one piece.</li>
+        </ul>
+        <pre class="code-note">import math          # no need to invent sqrt yourself
+import requests      # fetch web pages in one line
+import pandas        # crunch data like a boss
+
+# you could hand-roll all of this in 10 000 lines…
+# or import it in 3. The sharp way. Sharp sharp.</pre>
+        <p><strong>Where they live:</strong> Flask is a library. Django, NumPy, Beautiful Soup, PyTorch — whole careers are built by composing well-made libraries.</p>
+        
+        </div>
+    </div>
+
+    <h2 class="section-title">The story, slowly 🧠</h2>
+    <div class="explain-list" style="--acc: #7c3aed">
+        
+        <div class="explain-item"><span class="n">1</span><div><h3>Someone already did it</h3><p>The blend of 10 spices exists on the shelf. Some chef perfected it so you don&#39;t start from zero. Libraries are that shelf, but for code.</p></div></div>
+        
+        <div class="explain-item"><span class="n">2</span><div><h3>Import, don&#39;t rewrite</h3><p>One line fetches the tool. You don&#39;t need to know how the spice grinder works inside — you trust it, like thousands of devs before you.</p></div></div>
+        
+        <div class="explain-item"><span class="n">3</span><div><h3>Tested by thousands</h3><p>Popular libraries are used by millions and tested against every edge case. Your 10-spice version probably tastes bitter — theirs doesn&#39;t.</p></div></div>
+        
+        <div class="explain-item"><span class="n">4</span><div><h3>Focus on the actual problem</h3><p>Using a library frees your brain for your real task: the product, the algorithm, the feature. Nobody brags about rewriting sqrt.</p></div></div>
+        
+    </div>
+
+    <div class="nav-other">
+        <p class="crumb">Next lesson →</p>
+        <div class="grid mini">
+            
+            
+            <a class="card mini" href="functions.html" style="--acc: #e11d48"><span class="card-stripe"></span><div class="card-emoji">🍲</div><h3>The Pap Recipe</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="variables.html" style="--acc: #f97316"><span class="card-stripe"></span><div class="card-emoji">🏪</div><h3>The Spaza Stash</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="conditionals.html" style="--acc: #65a30d"><span class="card-stripe"></span><div class="card-emoji">🧍</div><h3>Taxi or Walk?</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="loops.html" style="--acc: #0d9488"><span class="card-stripe"></span><div class="card-emoji">🍳</div><h3>Fry Until the Pot is Empty</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="exceptions.html" style="--acc: #dc2626"><span class="card-stripe"></span><div class="card-emoji">🔌</div><h3>Load Shedding Survival</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            
+            
+            <a class="card mini" href="unit-tests.html" style="--acc: #059669"><span class="card-stripe"></span><div class="card-emoji">🥘</div><h3>Tasting the Potjie</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="file-io.html" style="--acc: #92400e"><span class="card-stripe"></span><div class="card-emoji">📒</div><h3>The Spaza Notebook</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="regex.html" style="--acc: #4f46e5"><span class="card-stripe"></span><div class="card-emoji">🔍</div><h3>CV Skena (Regex)</h3><span class="card-link">Open →</span></a>
+            
+            
+            
+            <a class="card mini" href="oop.html" style="--acc: #1d4ed8"><span class="card-stripe"></span><div class="card-emoji">🚐</div><h3>The Kombi Blueprint</h3><span class="card-link">Open →</span></a>
+            
+            <a class="card mini" href="data-structures.html" style="--acc: #0f766e"><span class="card-stripe"></span><div class="card-emoji">🧱</div><h3>The Kasi Line-Up</h3><span class="card-link">Open →</span></a>
+            
+            
+        </div>
+    </div>
+
+    
+    <script>
+        
+        var diy = document.getElementById('lib-diy');
+        var lib = document.getElementById('lib-lib');
+        var vs = document.getElementById('lib-vs');
+        var spices = ['coriander', 'cumin', 'turmeric', 'chilli', 'fenugreek',
+                      'mustard seed', 'garam masala', 'ginger', 'clove', 'garlic'];
+        var diyBusy = false;
+        document.getElementById('lib-run-diy').addEventListener('click', function () {
+            if (diyBusy) return;
+            diyBusy = true;
+            diy.innerHTML = '';
+            var i = 0;
+            var t = setInterval(function () {
+                if (i >= spices.length) {
+                    clearInterval(t);
+                    diyBusy = false;
+                    diy.insertAdjacentHTML('beforeend', '<div class="lib-done">Curry ready — after 10 steps 😮‍💨</div>');
+                    updateVs(10, 0);
+                    return;
+                }
+                diy.insertAdjacentHTML('beforeend', '<div class="lib-step">grinding ' + spices[i] + '…</div>');
+                i = i + 1;
+            }, 220);
+        });
+        document.getElementById('lib-run-lib').addEventListener('click', function () {
+            lib.innerHTML = '<div class="lib-step">import curry_mix</div>' +
+                            '<div class="lib-step">curry = curry_mix.make()</div>' +
+                            '<div class="lib-done">Curry ready — 1 step 💥</div>';
+            updateVs(0, 1);
+        });
+        function updateVs(diySteps, libSteps) {
+            if (diySteps + libSteps === 0) return;
+            var total = diySteps + libSteps;
+            vs.innerHTML = '<span class="lib-chip">DIY steps: ' + diySteps +
+                           '</span><span class="lib-chip">Import steps: ' + libSteps +
+                           '</span><span class="lib-chip lib-winner">🏆 Library wins — ' +
+                           Math.round((diySteps / Math.max(total, 1)) * 100) + '% less work</span>';
+        }
+        
+    </script>
+    
+
+    </main>
+
+    <div class="flagstrip">
+        <i class="r"></i><i class="y"></i><i class="g"></i><i class="b"></i><i class="k"></i><i class="w"></i>
+    </div>
+
+    <footer class="footer">
+        <strong>Mzansi Code</strong> — built by a South African, for South African students.<br>
+        Every CS concept already lives in your everyday. We just gave it a fancy name. 💚💛
+    </footer>
+
+    
+    <script>
+        
+        var diy = document.getElementById('lib-diy');
+        var lib = document.getElementById('lib-lib');
+        var vs = document.getElementById('lib-vs');
+        var spices = ['coriander', 'cumin', 'turmeric', 'chilli', 'fenugreek',
+                      'mustard seed', 'garam masala', 'ginger', 'clove', 'garlic'];
+        var diyBusy = false;
+        document.getElementById('lib-run-diy').addEventListener('click', function () {
+            if (diyBusy) return;
+            diyBusy = true;
+            diy.innerHTML = '';
+            var i = 0;
+            var t = setInterval(function () {
+                if (i >= spices.length) {
+                    clearInterval(t);
+                    diyBusy = false;
+                    diy.insertAdjacentHTML('beforeend', '<div class="lib-done">Curry ready — after 10 steps 😮‍💨</div>');
+                    updateVs(10, 0);
+                    return;
+                }
+                diy.insertAdjacentHTML('beforeend', '<div class="lib-step">grinding ' + spices[i] + '…</div>');
+                i = i + 1;
+            }, 220);
+        });
+        document.getElementById('lib-run-lib').addEventListener('click', function () {
+            lib.innerHTML = '<div class="lib-step">import curry_mix</div>' +
+                            '<div class="lib-step">curry = curry_mix.make()</div>' +
+                            '<div class="lib-done">Curry ready — 1 step 💥</div>';
+            updateVs(0, 1);
+        });
+        function updateVs(diySteps, libSteps) {
+            if (diySteps + libSteps === 0) return;
+            var total = diySteps + libSteps;
+            vs.innerHTML = '<span class="lib-chip">DIY steps: ' + diySteps +
+                           '</span><span class="lib-chip">Import steps: ' + libSteps +
+                           '</span><span class="lib-chip lib-winner">🏆 Library wins — ' +
+                           Math.round((diySteps / Math.max(total, 1)) * 100) + '% less work</span>';
+        }
+        
+    </script>
+    
+    <script src="../static/legacy-copy.js"></script>
+    <script src="../static/language.js"></script>
+</body>
+</html>
