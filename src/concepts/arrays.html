@@ -1,0 +1,69 @@
+        <header class="lesson-header">
+            <p class="crumb"><a href="index.html">← Coding Concepts</a></p>
+            <span class="hero-kicker">Numbered shelves in the spaza</span>
+            <h1 class="lesson-title"><span class="emoji-badge">📦</span> The Spaza Shelves</h1>
+            <p class="lesson-tag">An array is an ordered list of items stored under one name. Like numbered shelves at the spaza — each position has a number.</p>
+        </header>
+
+        <div class="lesson-body">
+            <div>
+                <div class="panel">
+                    <h2>Try it yourself <span class="live">live</span></h2>
+                    <p>Add items to the spaza shelves. Each shelf has a number (index) starting from 0.</p>
+                    <div class="stage">
+                        <div class="arr-stage">
+                            <div class="controls">
+                                <button class="green" data-arr="coke">🥤 Add Coke</button>
+                                <button class="yellow" data-arr="bread">🍞 Add Bread</button>
+                                <button class="blue" data-arr="wipes">🧻 Add Wipes</button>
+                                <button class="green" data-arr="remove">❌ Remove Last</button>
+                            </div>
+                            <div class="arr-result" id="arr-result">Shelves are empty — add some stock!</div>
+                            <pre class="trace" id="arr-trace"># array operations will appear here</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h2>The proper cs name</h2>
+                <p>An <strong>array</strong> (or list) stores multiple values in order. Each value has an <em>index</em> — its position, starting from 0.</p>
+                <ul>
+                    <li><code>items[0]</code> — first item (index 0).</li>
+                    <li><code>items.append(x)</code> — add to the end.</li>
+                    <li><code>items.pop()</code> — remove and return the last item.</li>
+                    <li><code>len(items)</code> — how many items in the array.</li>
+                </ul>
+                <pre class="code-note">shelves = ["Coke", "Bread", "Wipes"]
+
+print(shelves[0])      # "Coke"
+print(len(shelves))    # 3
+shelves.append("Fanta")
+print(shelves[-1])     # "Fanta" (last item)</pre>
+                <p><strong>Where they live:</strong> shopping carts, leaderboards, playlists, search results — anywhere you need an ordered collection.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">The story, slowly 🧠</h2>
+        <div class="explain-list" style="--acc: #b45309">
+            <div class="explain-item"><span class="n">1</span><div><h3>Numbered shelves</h3><p>Each item at the spaza has a shelf number. Shelf 0 is first, shelf 1 is second, and so on.</p></div></div>
+            <div class="explain-item"><span class="n">2</span><div><h3>One name, many items</h3><p>Instead of <code>item1</code>, <code>item2</code>, <code>item3</code>, you have one array: <code>shelves[0]</code>, <code>shelves[1]</code>.</p></div></div>
+            <div class="explain-item"><span class="n">3</span><div><h3>Add to the end</h3><p>New stock arrives? Append it to the end of the array. The array grows automatically.</p></div></div>
+            <div class="explain-item"><span class="n">4</span><div><h3>Access by position</h3><p>Need the third item? <code>shelves[2]</code>. Arrays give you instant access by index — no searching needed.</p></div></div>
+        </div>
+
+        <div class="nav-other">
+            <p class="crumb">Next lesson →</p>
+            <div class="grid mini">
+                <a class="card mini" href="functions.html" style="--acc: #e11d48"><span class="card-stripe"></span><div class="card-emoji">🍲</div><h3>The Pap Recipe</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="variables.html" style="--acc: #f97316"><span class="card-stripe"></span><div class="card-emoji">🏪</div><h3>The Spaza Stash</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="conditionals.html" style="--acc: #65a30d"><span class="card-stripe"></span><div class="card-emoji">🧍</div><h3>Taxi or Walk?</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="loops.html" style="--acc: #0d9488"><span class="card-stripe"></span><div class="card-emoji">🍳</div><h3>Fry Until the Pot is Empty</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="exceptions.html" style="--acc: #dc2626"><span class="card-stripe"></span><div class="card-emoji">🔌</div><h3>Load Shedding Survival</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="libraries.html" style="--acc: #7c3aed"><span class="card-stripe"></span><div class="card-emoji">🌶️</div><h3>Don&#39;t Grind It, Import It</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="unit-tests.html" style="--acc: #059669"><span class="card-stripe"></span><div class="card-emoji">🥘</div><h3>Tasting the Potjie</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="file-io.html" style="--acc: #92400e"><span class="card-stripe"></span><div class="card-emoji">📒</div><h3>The Spaza Notebook</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="regex.html" style="--acc: #4f46e5"><span class="card-stripe"></span><div class="card-emoji">🔍</div><h3>CV Skena (Regex)</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="oop.html" style="--acc: #1d4ed8"><span class="card-stripe"></span><div class="card-emoji">🚐</div><h3>The Kombi Blueprint</h3><span class="card-link">Open →</span></a>
+            </div>
+        </div>

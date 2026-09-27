@@ -3,44 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fry Until the Pot is Empty · DevPath</title>
-    <meta name="description" content="Repeat work without copying code">
-    <link rel="stylesheet" href="../../static/style.css">
-</head>
-<body data-mz-page="concepts">
-    <div class="ticker">
-        <div class="ticker-track">
-            ★ ye!bo! Learn coding the Mzansi way ★ fatcakes &amp; algorithms ★ kwa taxi rank queues ★ spaza shop data structures ★ sharp sharp ★
-            ★ ye!bo! Learn coding the Mzansi way ★ fatcakes &amp; algorithms ★ kwa taxi rank queues ★ spaza shop data structures ★ sharp sharp ★
-        </div>
-    </div>
-
-    <nav class="topbar">
-        <a class="brand" href="../../index.html"><span class="flagdot">🇿🇦</span> DevPath</a>
-        <div class="links">
-            <a href="../../index.html" data-i18n="home">Home</a>
-            <a href="../index.html" data-i18n="concepts">Concepts</a>
-            <button class="icon-btn" data-theme-toggle title="Toggle dark mode">🌓</button>
-            <button class="icon-btn" data-lang-toggle title="Change language">🌍 EN</button>
-        </div>
-    </nav>
-
-    <div class="flagstrip">
-        <i class="r"></i><i class="y"></i><i class="g"></i><i class="b"></i><i class="k"></i><i class="w"></i>
-    </div>
-
-    <div class="progress-container">
-        <div class="progress-bar" data-total="11"></div>
-    </div>
-
-    <main>
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fry Until the Pot is Empty · DevPath</title>
-    <meta name="description" content="Repeat work without copying code">
+    <title>The Spaza Stash · DevPath</title>
+    <meta name="description" content="Understand variables and how values move through a program">
     <link rel="stylesheet" href="../../static/style.css">
 </head>
 <body data-mz-page="concepts">
@@ -64,27 +28,56 @@
     </div>
 
     <main>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Spaza Stash · DevPath</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body data-mz-page="concepts">
+    <div class="ticker">
+        <div class="ticker-track">
+            ★ ye!bo! Learn coding the Mzansi way ★ fatcakes &amp; algorithms ★ kwa taxi rank queues ★ spaza shop data structures ★ sharp sharp ★
+            ★ ye!bo! Learn coding the Mzansi way ★ fatcakes &amp; algorithms ★ kwa taxi rank queues ★ spaza shop data structures ★ sharp sharp ★
+        </div>
+    </div>
+
+    <nav class="topbar">
+        <a class="brand" href="../index.html"><span class="flagdot">🇿🇦</span> DevPath</a>
+        <div class="links">
+            <a href="../index.html">Home</a>
+            <a href="index.html">Concepts</a>
+        </div>
+    </nav>
+
+    <div class="flagstrip">
+        <i class="r"></i><i class="y"></i><i class="g"></i><i class="b"></i><i class="k"></i><i class="w"></i>
+    </div>
+
+    <main>
         <header class="lesson-header">
             <p class="crumb"><a href="index.html">← Coding Concepts</a></p>
-            <span class="hero-kicker">Repeat until done</span>
-            <h1 class="lesson-title"><span class="emoji-badge">🍳</span> Fry Until the Pot is Empty</h1>
-            <p class="lesson-tag">Loops repeat the same action multiple times without you having to copy-paste code. The kitchen runs on loops.</p>
+            <span class="hero-kicker">Named boxes that hold values</span>
+            <h1 class="lesson-title"><span class="emoji-badge">🏪</span> The Spaza Stash</h1>
+            <p class="lesson-tag">A variable is a labelled box: give it a name, put a value inside, and read it back whenever you need it.</p>
         </header>
 
         <div class="lesson-body">
             <div>
                 <div class="panel">
                     <h2>Try it yourself <span class="live">live</span></h2>
-                    <p>Click to fry fatcakes. The loop keeps frying until the count reaches zero — no copy-paste needed.</p>
+                    <p>The spaza shelf holds stock items. Each item has a name and a price — that's a variable. Update it when prices change.</p>
                     <div class="stage">
-                        <div class="loop-stage">
-                            <div class="loop-pot" id="loop-pot"></div>
+                        <div class="var-stage">
+                            <div class="var-grid" id="var-grid"></div>
                             <div class="controls">
-                                <button class="green" data-fry="5">🥟 Fry 5</button>
-                                <button class="yellow" data-fry="10">🥟 Fry 10</button>
-                                <button class="blue" data-fry="20">🥟 Fry 20</button>
+                                <button class="green" data-var="coke">🥤 Restock Coke — R15</button>
+                                <button class="yellow" data-var="bread">🍞 Restock Bread — R12</button>
+                                <button class="blue" data-var="wipes">🧻 Restock Wipes — R22</button>
                             </div>
-                            <pre class="trace" id="loop-trace"># while loop will appear here</pre>
+                            <pre class="trace" id="var-trace"># click a button to update a variable</pre>
                         </div>
                     </div>
                 </div>
@@ -92,39 +85,34 @@
 
             <div class="panel">
                 <h2>The proper cs name</h2>
-                <p>A <strong>loop</strong> repeats a block of code. <code>while</code> loops until a condition is false; <code>for</code> loops a set number of times.</p>
+                <p>A <strong>variable</strong> is a named container that stores a value. The name stays the same, but the value inside can change — that's the whole point.</p>
                 <ul>
-                    <li><code>while pot_not_empty:</code> — keep frying while there's batter.</li>
-                    <li><code>for i in range(10):</code> — fry exactly 10 fatcakes.</li>
-                    <li><code>break</code> — stop the loop early if needed.</li>
+                    <li><code>price = 15</code> — create a variable called <code>price</code>, store 15.</li>
+                    <li><code>price = price + 2</code> — read the old value, add 2, store it back.</li>
+                    <li><code>print(price)</code> — outputs <code>17</code>.</li>
                 </ul>
-                <pre class="code-note">batter = 10
-
-while batter > 0:
-    fry_fatcake()
-    batter -= 1   # one less to fry
-
-# Or with a for loop:
-for i in range(10):
-    fry_fatcake()</pre>
-                <p><strong>Where they live:</strong> processing lists, reading files line by line, game loops, retrying failed operations.</p>
+                <pre class="code-note">stock = "Coke"
+price = 15
+price = price + 2   # price is now 17
+print(price)        # 17</pre>
+                <p><strong>Where they live:</strong> every app, game, and website uses variables to remember things — your score, your name, what's in your cart.</p>
             </div>
         </div>
 
         <h2 class="section-title">The story, slowly 🧠</h2>
-        <div class="explain-list" style="--acc: #0d9488">
-            <div class="explain-item"><span class="n">1</span><div><h3>Set the condition</h3><p>How much batter is left? That's the loop's condition — it checks before every iteration.</p></div></div>
-            <div class="explain-item"><span class="n">2</span><div><h3>Do the work</h3><p>Fry one fatcake. That's the loop body — the action that repeats.</p></div></div>
-            <div class="explain-item"><span class="n">3</span><div><h3>Update the counter</h3><p>Batter goes down by one. Without this, the loop runs forever!</p></div></div>
-            <div class="explain-item"><span class="n">4</span><div><h3>Check again</h3><p>Still batter left? Go back to step 2. No batter? Exit the loop. Sharp.</p></div></div>
+        <div class="explain-list" style="--acc: #f97316">
+            <div class="explain-item"><span class="n">1</span><div><h3>Label the box</h3><p>Every item at the spaza has a name — Coke, bread, wipes. In code, that name is the variable name: <code>price</code>, <code>stock</code>.</p></div></div>
+            <div class="explain-item"><span class="n">2</span><div><h3>Put something inside</h3><p>The price of Coke is R15. You store that value: <code>price = 15</code>. The box now holds 15.</p></div></div>
+            <div class="explain-item"><span class="n">3</span><div><h3>Read it back</h3><p>When a customer asks "how much?", you read the variable: <code>print(price)</code>. You don't need to remember — the variable does.</p></div></div>
+            <div class="explain-item"><span class="n">4</span><div><h3>Update when things change</h3><p>Supplier prices go up? Just change the value: <code>price = price + 2</code>. The name stays, the value updates. Sharp.</p></div></div>
         </div>
 
         <div class="nav-other">
             <p class="crumb">Next lesson →</p>
             <div class="grid mini">
                 <a class="card mini" href="functions.html" style="--acc: #e11d48"><span class="card-stripe"></span><div class="card-emoji">🍲</div><h3>The Pap Recipe</h3><span class="card-link">Open →</span></a>
-                <a class="card mini" href="variables.html" style="--acc: #f97316"><span class="card-stripe"></span><div class="card-emoji">🏪</div><h3>The Spaza Stash</h3><span class="card-link">Open →</span></a>
                 <a class="card mini" href="conditionals.html" style="--acc: #65a30d"><span class="card-stripe"></span><div class="card-emoji">🧍</div><h3>Taxi or Walk?</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="loops.html" style="--acc: #0d9488"><span class="card-stripe"></span><div class="card-emoji">🍳</div><h3>Fry Until the Pot is Empty</h3><span class="card-link">Open →</span></a>
                 <a class="card mini" href="exceptions.html" style="--acc: #dc2626"><span class="card-stripe"></span><div class="card-emoji">🔌</div><h3>Load Shedding Survival</h3><span class="card-link">Open →</span></a>
                 <a class="card mini" href="libraries.html" style="--acc: #7c3aed"><span class="card-stripe"></span><div class="card-emoji">🌶️</div><h3>Don&#39;t Grind It, Import It</h3><span class="card-link">Open →</span></a>
                 <a class="card mini" href="unit-tests.html" style="--acc: #059669"><span class="card-stripe"></span><div class="card-emoji">🥘</div><h3>Tasting the Potjie</h3><span class="card-link">Open →</span></a>
@@ -145,8 +133,8 @@ for i in range(10):
         Every CS concept already lives in your everyday. We just gave it a fancy name. 💚💛
     </footer>
 
-    <script src="../../static/language.js"></script>
-    <script src="../../static/loops.js"></script>
+    <script src="../static/variables.js"></script>
+    <script src="../static/language.js"></script>
 </body>
 </html>
     </main>
@@ -161,6 +149,6 @@ for i in range(10):
     </footer>
 
     <script src="../../static/language.js"></script>
-    <script src="../../static/loops.js"></script>
+    <script src="../../static/variables.js"></script>
 </body>
 </html>

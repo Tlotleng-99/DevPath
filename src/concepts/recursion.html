@@ -1,0 +1,68 @@
+        <header class="lesson-header">
+            <p class="crumb"><a href="index.html">← Coding Concepts</a></p>
+            <span class="hero-kicker">Russian dolls all the way down</span>
+            <h1 class="lesson-title"><span class="emoji-badge">🪆</span> The Matryoshka Method</h1>
+            <p class="lesson-tag">Recursion is when a function calls itself. Like Russian dolls — open one, find another inside, repeat until you reach the smallest one.</p>
+        </header>
+
+        <div class="lesson-body">
+            <div>
+                <div class="panel">
+                    <h2>Try it yourself <span class="live">live</span></h2>
+                    <p>Watch recursion unfold like Russian dolls. Each call opens a smaller version of itself until it reaches the base case.</p>
+                    <div class="stage">
+                        <div class="rec-stage">
+                            <div class="controls">
+                                <button class="green" data-rec="3">🪆 Open 3 dolls</button>
+                                <button class="yellow" data-rec="5">🪆 Open 5 dolls</button>
+                                <button class="blue" data-rec="7">🪆 Open 7 dolls</button>
+                            </div>
+                            <div class="rec-result" id="rec-result">Click a button to start unwrapping...</div>
+                            <pre class="trace" id="rec-trace"># recursive calls will appear here</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h2>The proper cs name</h2>
+                <p><strong>Recursion</strong> is when a function calls itself to solve a smaller version of the same problem. It needs a <em>base case</em> to stop.</p>
+                <ul>
+                    <li><strong>Base case</strong> — when to stop (the smallest doll).</li>
+                    <li><strong>Recursive case</strong> — call yourself with a smaller input.</li>
+                    <li><strong>Call stack</strong> — each call waits for the next to finish.</li>
+                </ul>
+                <pre class="code-note">def count_dolls(n):
+    if n == 0:           # base case
+        return "smallest doll!"
+    return count_dolls(n - 1)  # recursive call
+
+print(count_dolls(3))
+# Opens doll 3 → doll 2 → doll 1 → smallest!</pre>
+                <p><strong>Where they live:</strong> tree traversal, factorial calculation, Fibonacci sequence, file system navigation, divide-and-conquer algorithms.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">The story, slowly 🧠</h2>
+        <div class="explain-list" style="--acc: #be185d">
+            <div class="explain-item"><span class="n">1</span><div><h3>Open the outer doll</h3><p>You have a big Russian doll. Inside is a smaller one. That's the recursive call — same problem, smaller size.</p></div></div>
+            <div class="explain-item"><span class="n">2</span><div><h3>Keep opening</h3><p>Each doll contains a smaller one. The function calls itself again and again, each time with a smaller doll.</p></div></div>
+            <div class="explain-item"><span class="n">3</span><div><h3>Reach the base case</h3><p>Finally you reach the smallest doll — it doesn't open. That's the base case. No more recursive calls.</p></div></div>
+            <div class="explain-item"><span class="n">4</span><div><h3>Unwind the stack</h3><p>Now you close each doll in reverse order. The call stack unwinds, returning values back up the chain.</p></div></div>
+        </div>
+
+        <div class="nav-other">
+            <p class="crumb">Next lesson →</p>
+            <div class="grid mini">
+                <a class="card mini" href="functions.html" style="--acc: #e11d48"><span class="card-stripe"></span><div class="card-emoji">🍲</div><h3>The Pap Recipe</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="variables.html" style="--acc: #f97316"><span class="card-stripe"></span><div class="card-emoji">🏪</div><h3>The Spaza Stash</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="conditionals.html" style="--acc: #65a30d"><span class="card-stripe"></span><div class="card-emoji">🧍</div><h3>Taxi or Walk?</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="loops.html" style="--acc: #0d9488"><span class="card-stripe"></span><div class="card-emoji">🍳</div><h3>Fry Until the Pot is Empty</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="exceptions.html" style="--acc: #dc2626"><span class="card-stripe"></span><div class="card-emoji">🔌</div><h3>Load Shedding Survival</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="libraries.html" style="--acc: #7c3aed"><span class="card-stripe"></span><div class="card-emoji">🌶️</div><h3>Don&#39;t Grind It, Import It</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="unit-tests.html" style="--acc: #059669"><span class="card-stripe"></span><div class="card-emoji">🥘</div><h3>Tasting the Potjie</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="file-io.html" style="--acc: #92400e"><span class="card-stripe"></span><div class="card-emoji">📒</div><h3>The Spaza Notebook</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="regex.html" style="--acc: #4f46e5"><span class="card-stripe"></span><div class="card-emoji">🔍</div><h3>CV Skena (Regex)</h3><span class="card-link">Open →</span></a>
+                <a class="card mini" href="oop.html" style="--acc: #1d4ed8"><span class="card-stripe"></span><div class="card-emoji">🚐</div><h3>The Kombi Blueprint</h3><span class="card-link">Open →</span></a>
+            </div>
+        </div>
