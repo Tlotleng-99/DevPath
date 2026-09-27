@@ -3,102 +3,109 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevPath | Learn coding with confidence</title>
+    <title>DevPath | Mzansi Code Learning</title>
     <meta
       name="description"
-      content="DevPath is a beginner-friendly coding learning platform that helps students build skills through lessons, examples, and practice."
+      content="DevPath is a beginner-friendly coding learning platform with practical lessons, progress tracking, and a connected path through core programming concepts."
     />
     <link rel="stylesheet" href="static/style.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a href="index.html" class="brand">DevPath</a>
-        <nav class="main-nav" aria-label="Main navigation">
-          <a href="index.html">Home</a>
-          <a href="concepts/index.html">Concepts</a>
-          <a href="concepts/variables.html">Variables</a>
-          <a href="concepts/functions.html">Functions</a>
-          <a href="concepts/oop.html">OOP</a>
-        </nav>
+    <div class="ticker" aria-label="learning announcement">
+      <div class="ticker-track">
+        <span>★ COURSE 03 · THE CODING LANGUAGE ★</span>
+        <span>variables, loops, functions &amp; more</span>
+        <span>ye!bo! Learn coding the Mzansi way</span>
       </div>
-    </header>
+    </div>
+
+    <nav class="topbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="flagdot">🇿🇦</span> DevPath</a>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="concepts/index.html">Concepts</a>
+        <a href="concepts/variables.html">Variables</a>
+        <a href="concepts/functions.html">Functions</a>
+        <a href="concepts/oop.html">OOP</a>
+      </div>
+    </nav>
+
+    <div class="flagstrip" aria-hidden="true">
+      <i class="r"></i><i class="y"></i><i class="g"></i><i class="b"></i><i class="k"></i><i class="w"></i>
+    </div>
 
     <main>
-      <section class="hero">
-        <div class="container hero-inner">
-          <div class="hero-copy">
-            <p class="eyebrow">E-learning for future developers</p>
-            <h1>Build your coding path one concept at a time.</h1>
-            <p class="lead">
-              DevPath turns programming concepts into clear, practical lessons so students can
-              learn faster, understand the why behind the code, and actually apply what they
-              learn.
-            </p>
-            <div class="hero-actions">
-              <a href="concepts/index.html" class="button primary">Start learning</a>
-              <a href="#tracks" class="button secondary">Explore tracks</a>
-            </div>
-          </div>
-
-          <div class="hero-panel" aria-label="Learning overview">
-            <div class="mini-card">
-              <span class="mini-label">Course</span>
-              <strong>Core Concepts</strong>
-            </div>
-            <div class="mini-card">
-              <span class="mini-label">Focus</span>
-              <strong>JavaScript &amp; Python fundamentals</strong>
-            </div>
-            <div class="mini-card">
-              <span class="mini-label">Outcome</span>
-              <strong>Confidence in real coding tasks</strong>
-            </div>
+      <header class="hero container">
+        <div class="hero-copy">
+          <p class="eyebrow">E-learning for future developers</p>
+          <h1>Build your coding path with confidence.</h1>
+          <p class="lead">
+            DevPath turns programming concepts into real, practical learning moments.
+            Students can move from the basics to more advanced ideas with lessons that are easy to follow and easy to apply.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="concepts/index.html">Start learning</a>
+            <a class="button secondary" href="#tracks">Explore tracks</a>
           </div>
         </div>
-      </section>
 
-      <section class="container" id="tracks">
+        <div class="hero-panel">
+          <div class="mini-card">
+            <span class="mini-label">Track</span>
+            <strong>Core coding concepts</strong>
+          </div>
+          <div class="mini-card">
+            <span class="mini-label">Style</span>
+            <strong>Practical, beginner-friendly, Mzansi inspired</strong>
+          </div>
+          <div class="mini-card">
+            <span class="mini-label">Outcome</span>
+            <strong>Learn, code, and grow step by step</strong>
+          </div>
+        </div>
+      </header>
+
+      <section id="tracks" class="container tracks-wrap">
         <div class="section-heading">
           <p class="eyebrow">Course map</p>
           <h2>Choose your next lesson</h2>
         </div>
 
         <div class="card-grid">
-          <a class="topic-card" href="concepts/variables.html">
-            <span class="topic-icon">🧺</span>
-            <h3>Variables</h3>
-            <p>Store values and make programs flexible.</p>
+          <a class="topic-card" href="concepts/variables.html" style="--accent:#f97316;">
+            <span class="topic-icon">🏪</span>
+            <h3>The Spaza Stash</h3>
+            <p>Understand variables and how values move through a program.</p>
           </a>
 
-          <a class="topic-card" href="concepts/functions.html">
+          <a class="topic-card" href="concepts/functions.html" style="--accent:#e11d48;">
             <span class="topic-icon">🍲</span>
-            <h3>Functions</h3>
-            <p>Reuse logic and break big problems into steps.</p>
+            <h3>The Pap Recipe</h3>
+            <p>Group logic into reusable functions and keep code neat.</p>
           </a>
 
-          <a class="topic-card" href="concepts/conditionals.html">
+          <a class="topic-card" href="concepts/conditionals.html" style="--accent:#65a30d;">
             <span class="topic-icon">🚶</span>
-            <h3>Conditionals</h3>
-            <p>Make decisions with if, else, and switch logic.</p>
+            <h3>Taxi or Walk?</h3>
+            <p>Use conditionals to make decisions when different outcomes are possible.</p>
           </a>
 
-          <a class="topic-card" href="concepts/loops.html">
-            <span class="topic-icon">🔁</span>
-            <h3>Loops</h3>
-            <p>Repeat tasks efficiently with clean patterns.</p>
+          <a class="topic-card" href="concepts/loops.html" style="--accent:#0d9488;">
+            <span class="topic-icon">🍳</span>
+            <h3>Fry Until the Pot is Empty</h3>
+            <p>Repeat work without copying code over and over again.</p>
           </a>
 
-          <a class="topic-card" href="concepts/oop.html">
+          <a class="topic-card" href="concepts/oop.html" style="--accent:#1d4ed8;">
             <span class="topic-icon">🚐</span>
-            <h3>OOP</h3>
+            <h3>The Kombi Blueprint</h3>
             <p>Model real-world systems using classes and objects.</p>
           </a>
 
-          <a class="topic-card" href="concepts/data-structures.html">
+          <a class="topic-card" href="concepts/data-structures.html" style="--accent:#0f766e;">
             <span class="topic-icon">🧱</span>
-            <h3>Data Structures</h3>
-            <p>Organise and access information in the right way.</p>
+            <h3>The Kasi Line-Up</h3>
+            <p>Organise data so programs stay structured and efficient.</p>
           </a>
         </div>
       </section>
@@ -106,32 +113,30 @@
       <section class="feature-band">
         <div class="container feature-grid">
           <div>
-            <p class="eyebrow">Why DevPath</p>
+            <p class="eyebrow light">Why DevPath</p>
             <h2>A learning experience built for real progress.</h2>
           </div>
+
           <div class="feature-list">
             <div>
               <strong>Clear explanations</strong>
-              <p>Each concept is broken down with examples and practical meaning.</p>
+              <p>Each concept is broken down into everyday scenarios that connect to how students already think.</p>
             </div>
             <div>
               <strong>Build-as-you-learn</strong>
-              <p>Students move from simple ideas to more advanced programming skills.</p>
+              <p>Students practice while they learn, then move into more advanced ideas with confidence.</p>
             </div>
             <div>
-              <strong>Connected learning path</strong>
-              <p>Every topic leads naturally into the next lesson in the roadmap.</p>
+              <strong>Connected pathways</strong>
+              <p>Each lesson links naturally to the next so the learning journey feels guided and complete.</p>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-wrap">
-        <p>© <span id="year"></span> DevPath</p>
-        <a href="concepts/index.html">Browse all concepts</a>
-      </div>
+    <footer class="footer container">
+      <strong>DevPath</strong> — built to help students learn coding one step at a time. 💚💛
     </footer>
 
     <script src="static/language.js"></script>
